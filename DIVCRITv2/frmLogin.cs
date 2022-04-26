@@ -19,8 +19,31 @@ namespace DIVCRITv2
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
-            var menu = new Menu();
-            menu.Show();
+            frmMenu menu = new frmMenu();
+            menu.ShowDialog();
+            this.Close();
+        }
+
+        private void btnMinimize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnMaximize_Click(object sender, EventArgs e)
+        {
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Maximized;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
