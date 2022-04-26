@@ -220,7 +220,7 @@ namespace DIVCRITv2
 
         private void iconButton6_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmAltaColaboradores>();
+            
         }
     }
 }
