@@ -16,5 +16,11 @@ namespace DIVCRITv2
         {
             InitializeComponent();
         }
+
+        private void btnUsuario_Click(object sender, EventArgs e)
+        {
+            var menu = new Menu();
+            menu.Show();
+        }
     }
 }
