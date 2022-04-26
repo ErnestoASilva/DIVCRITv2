@@ -62,12 +62,6 @@
     <Compile Include="frmAltaColaboradores.Designer.cs">
       <DependentUpon>frmAltaColaboradores.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAyuda.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmAyuda.Designer.cs">
-      <DependentUpon>frmAyuda.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,9 +78,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAltaColaboradores.resx">
       <DependentUpon>frmAltaColaboradores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAyuda.resx">
-      <DependentUpon>frmAyuda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
