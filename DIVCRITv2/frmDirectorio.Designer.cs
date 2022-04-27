@@ -29,9 +29,9 @@ namespace DIVCRITv2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbxTipoBusqueda = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -97,36 +97,36 @@ namespace DIVCRITv2
             this.dgvSolicitudes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSolicitudes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgvSolicitudes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSolicitudes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSolicitudes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSolicitudes.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSolicitudes.DefaultCellStyle = dataGridViewCellStyle8;
             this.dgvSolicitudes.EnableHeadersVisualStyles = false;
             this.dgvSolicitudes.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvSolicitudes.Location = new System.Drawing.Point(12, 43);
             this.dgvSolicitudes.Name = "dgvSolicitudes";
             this.dgvSolicitudes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSolicitudes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSolicitudes.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.dgvSolicitudes.RowHeadersVisible = false;
             this.dgvSolicitudes.RowTemplate.Height = 23;
             this.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -154,9 +154,9 @@ namespace DIVCRITv2
             this.gbxDatos.Controls.Add(this.label4);
             this.gbxDatos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDatos.ForeColor = System.Drawing.SystemColors.Control;
-            this.gbxDatos.Location = new System.Drawing.Point(510, 32);
+            this.gbxDatos.Location = new System.Drawing.Point(510, 1);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(413, 468);
+            this.gbxDatos.Size = new System.Drawing.Size(413, 499);
             this.gbxDatos.TabIndex = 10;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Colaborador";
@@ -165,7 +165,7 @@ namespace DIVCRITv2
             // 
             this.tbxCorreo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxCorreo.Enabled = false;
-            this.tbxCorreo.Location = new System.Drawing.Point(97, 356);
+            this.tbxCorreo.Location = new System.Drawing.Point(97, 387);
             this.tbxCorreo.Name = "tbxCorreo";
             this.tbxCorreo.Size = new System.Drawing.Size(305, 27);
             this.tbxCorreo.TabIndex = 16;
@@ -177,7 +177,7 @@ namespace DIVCRITv2
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(11, 357);
+            this.label2.Location = new System.Drawing.Point(11, 388);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 21);
             this.label2.TabIndex = 15;
@@ -190,7 +190,7 @@ namespace DIVCRITv2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxImagen.Location = new System.Drawing.Point(119, 40);
             this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(174, 173);
+            this.pbxImagen.Size = new System.Drawing.Size(174, 204);
             this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxImagen.TabIndex = 14;
             this.pbxImagen.TabStop = false;
@@ -199,7 +199,7 @@ namespace DIVCRITv2
             // 
             this.tbxArea.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxArea.Enabled = false;
-            this.tbxArea.Location = new System.Drawing.Point(97, 432);
+            this.tbxArea.Location = new System.Drawing.Point(97, 463);
             this.tbxArea.Name = "tbxArea";
             this.tbxArea.Size = new System.Drawing.Size(305, 27);
             this.tbxArea.TabIndex = 13;
@@ -208,7 +208,7 @@ namespace DIVCRITv2
             // 
             this.tbxOficina.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxOficina.Enabled = false;
-            this.tbxOficina.Location = new System.Drawing.Point(97, 394);
+            this.tbxOficina.Location = new System.Drawing.Point(97, 425);
             this.tbxOficina.Name = "tbxOficina";
             this.tbxOficina.Size = new System.Drawing.Size(305, 27);
             this.tbxOficina.TabIndex = 12;
@@ -217,7 +217,7 @@ namespace DIVCRITv2
             // 
             this.tbxExtension.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxExtension.Enabled = false;
-            this.tbxExtension.Location = new System.Drawing.Point(97, 318);
+            this.tbxExtension.Location = new System.Drawing.Point(97, 349);
             this.tbxExtension.Name = "tbxExtension";
             this.tbxExtension.Size = new System.Drawing.Size(305, 27);
             this.tbxExtension.TabIndex = 11;
@@ -226,7 +226,7 @@ namespace DIVCRITv2
             // 
             this.tbxPuesto.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxPuesto.Enabled = false;
-            this.tbxPuesto.Location = new System.Drawing.Point(97, 280);
+            this.tbxPuesto.Location = new System.Drawing.Point(97, 311);
             this.tbxPuesto.Name = "tbxPuesto";
             this.tbxPuesto.Size = new System.Drawing.Size(305, 27);
             this.tbxPuesto.TabIndex = 10;
@@ -235,7 +235,7 @@ namespace DIVCRITv2
             // 
             this.tbxNombre.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxNombre.Enabled = false;
-            this.tbxNombre.Location = new System.Drawing.Point(97, 242);
+            this.tbxNombre.Location = new System.Drawing.Point(97, 273);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(305, 27);
             this.tbxNombre.TabIndex = 9;
@@ -247,7 +247,7 @@ namespace DIVCRITv2
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(11, 433);
+            this.label9.Location = new System.Drawing.Point(11, 464);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 21);
             this.label9.TabIndex = 8;
@@ -260,7 +260,7 @@ namespace DIVCRITv2
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(11, 395);
+            this.label7.Location = new System.Drawing.Point(11, 426);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 21);
             this.label7.TabIndex = 6;
@@ -273,7 +273,7 @@ namespace DIVCRITv2
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(11, 319);
+            this.label5.Location = new System.Drawing.Point(11, 350);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 21);
             this.label5.TabIndex = 4;
@@ -286,7 +286,7 @@ namespace DIVCRITv2
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(11, 281);
+            this.label3.Location = new System.Drawing.Point(11, 312);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 21);
             this.label3.TabIndex = 2;
@@ -299,7 +299,7 @@ namespace DIVCRITv2
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(11, 243);
+            this.label4.Location = new System.Drawing.Point(11, 274);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(81, 21);
             this.label4.TabIndex = 0;
