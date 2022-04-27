@@ -104,7 +104,7 @@ namespace DIVCRITv2
             this.dgvSolicitudes.RowHeadersVisible = false;
             this.dgvSolicitudes.RowTemplate.Height = 23;
             this.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSolicitudes.Size = new System.Drawing.Size(417, 544);
+            this.dgvSolicitudes.Size = new System.Drawing.Size(349, 544);
             this.dgvSolicitudes.TabIndex = 0;
             // 
             // idSol
@@ -145,7 +145,7 @@ namespace DIVCRITv2
             "RECHAZADO"});
             this.cbxEstadoLista.Location = new System.Drawing.Point(162, 18);
             this.cbxEstadoLista.Name = "cbxEstadoLista";
-            this.cbxEstadoLista.Size = new System.Drawing.Size(266, 28);
+            this.cbxEstadoLista.Size = new System.Drawing.Size(199, 28);
             this.cbxEstadoLista.TabIndex = 2;
             // 
             // gbxSolicitud
@@ -168,7 +168,7 @@ namespace DIVCRITv2
             this.gbxSolicitud.Controls.Add(this.lblNomina);
             this.gbxSolicitud.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxSolicitud.ForeColor = System.Drawing.SystemColors.Window;
-            this.gbxSolicitud.Location = new System.Drawing.Point(435, 12);
+            this.gbxSolicitud.Location = new System.Drawing.Point(367, 12);
             this.gbxSolicitud.Name = "gbxSolicitud";
             this.gbxSolicitud.Size = new System.Drawing.Size(428, 585);
             this.gbxSolicitud.TabIndex = 3;
@@ -324,7 +324,7 @@ namespace DIVCRITv2
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(875, 609);
+            this.ClientSize = new System.Drawing.Size(807, 609);
             this.Controls.Add(this.cbxEstadoLista);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gbxSolicitud);
