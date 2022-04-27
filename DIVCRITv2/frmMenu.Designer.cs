@@ -355,7 +355,7 @@ namespace DIVCRITv2
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 30;
             this.btnMenu.Location = new System.Drawing.Point(165, 11);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(60, 60);
             this.btnMenu.TabIndex = 0;
@@ -422,8 +422,8 @@ namespace DIVCRITv2
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(816, 1);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMinimize.Location = new System.Drawing.Point(670, 1);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(45, 25);
             this.btnMinimize.TabIndex = 2;
@@ -440,8 +440,8 @@ namespace DIVCRITv2
             this.btnMaximize.IconColor = System.Drawing.Color.White;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(861, 1);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnMaximize.Location = new System.Drawing.Point(715, 1);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(45, 25);
             this.btnMaximize.TabIndex = 2;
@@ -458,8 +458,8 @@ namespace DIVCRITv2
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(906, 1);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnClose.Location = new System.Drawing.Point(760, 1);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(45, 25);
             this.btnClose.TabIndex = 1;
