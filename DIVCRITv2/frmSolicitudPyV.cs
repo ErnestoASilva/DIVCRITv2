@@ -16,5 +16,50 @@ namespace DIVCRITv2
         {
             InitializeComponent();
         }
+
+        private void frmSolicitudPyV_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbpSolicitud_DrawItem(object sender, DrawItemEventArgs e)
+        {
+           
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblPermiso_Dias_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

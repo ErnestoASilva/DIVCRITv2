@@ -233,6 +233,7 @@ namespace DIVCRITv2
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton2
             // 
@@ -372,7 +373,7 @@ namespace DIVCRITv2
             this.panelDesktop.Size = new System.Drawing.Size(864, 479);
             this.panelDesktop.TabIndex = 2;
             // 
-            // Menu
+            // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -380,9 +381,10 @@ namespace DIVCRITv2
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
-            this.Name = "Menu";
+            this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.Resize += new System.EventHandler(this.Menu_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
