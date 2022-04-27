@@ -218,9 +218,9 @@ namespace DIVCRITv2
             }
         }
 
-        private void iconButton6_Click(object sender, EventArgs e)
+        private void iconButton4_Click(object sender, EventArgs e)
         {
-            
+            AbrirFormulario<frmGestionSolicitud>();
         }
     }
 }
