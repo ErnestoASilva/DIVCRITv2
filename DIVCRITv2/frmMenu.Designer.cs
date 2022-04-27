@@ -500,7 +500,7 @@ namespace DIVCRITv2
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
-            this.Load += new System.EventHandler(this.frmMenu_Load);
+            //this.Load += new System.EventHandler(this.frmMenu_Load);
             this.Resize += new System.EventHandler(this.Menu_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);

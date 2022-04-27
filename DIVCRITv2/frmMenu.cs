@@ -225,7 +225,6 @@ namespace DIVCRITv2
 
         private void btnAltaColab_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmAltaColaboradores>();
             if (estadoBarMenu)
                 //CollapseMenu();
             estadoBarMenu = false;
