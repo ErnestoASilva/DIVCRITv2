@@ -225,7 +225,7 @@ namespace DIVCRITv2
 
         private void btnAltaColab_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmAltaColaboradores>();
+            //AbrirFormulario<frmAltaColaboradores>();
             if (estadoBarMenu)
                 CollapseMenu();
             estadoBarMenu = false;
@@ -253,6 +253,7 @@ namespace DIVCRITv2
 
         private void btnGestionPyV_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmGestionSolicitud>();
             if (estadoBarMenu)
                 CollapseMenu();
             estadoBarMenu = false;
