@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DIVCRITv2
 {
-    public partial class frmAltaColaboradores : Form
+    public partial class frmSolicitudPyV : Form
     {
-        public frmAltaColaboradores()
+        public frmSolicitudPyV()
         {
             InitializeComponent();
         }
