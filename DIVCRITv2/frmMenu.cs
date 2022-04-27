@@ -15,12 +15,14 @@ namespace DIVCRITv2
     {
         private int borderSize = 2;
         private Size formSize;
+        private bool estadoBarMenu;
         public frmMenu()
         {
             InitializeComponent();
             //CollapseMenu();
             this.Padding = new Padding(borderSize);
             this.BackColor = Color.FromArgb(82, 2, 149);
+            estadoBarMenu = true;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -80,17 +82,16 @@ namespace DIVCRITv2
 
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            CollapseMenu();
-;        }
-
         private void CollapseMenu()
         {
             if (this.panelMenu.Width > 200) //Collapse menu
             {
                 panelMenu.Width = 100;
                 pictureBox1.Visible = false;
+                pbxImagen.Location = new Point(pbxImagen.Location.X + 12, pbxImagen.Location.Y);
+                lblNombre.Visible = false;
+                lblArea.Visible = false;
+                lblPuesto.Visible = false;
                 btnMenu.Dock = DockStyle.Top;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -103,6 +104,10 @@ namespace DIVCRITv2
             { //Expand menu
                 panelMenu.Width = 230;
                 pictureBox1.Visible = true;
+                pbxImagen.Location = new Point(pbxImagen.Location.X - 12, pbxImagen.Location.Y);
+                lblNombre.Visible = true;
+                lblArea.Visible = true;
+                lblPuesto.Visible = true;
                 btnMenu.Dock = DockStyle.None;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -110,7 +115,7 @@ namespace DIVCRITv2
                     menuButton.ImageAlign = ContentAlignment.MiddleLeft;
                     menuButton.Padding = new Padding(10, 0, 0, 0);
                 }
-            }
+            } 
         }
 
         protected override void WndProc(ref Message m)
@@ -218,9 +223,81 @@ namespace DIVCRITv2
             }
         }
 
-        private void iconButton6_Click(object sender, EventArgs e)
+        private void btnAltaColab_Click(object sender, EventArgs e)
         {
             AbrirFormulario<frmAltaColaboradores>();
+            if (estadoBarMenu)
+                CollapseMenu();
+            estadoBarMenu = false;
+            iconCurrentChildForm.IconChar = btnAltaColab.IconChar;
+            lblTitleChildForm.Text = "ALTA DE COLABORADORES";
+        }
+
+        private void btnDirectorio_Click(object sender, EventArgs e)
+        {
+            if (estadoBarMenu)
+                CollapseMenu();
+            estadoBarMenu = false;
+            iconCurrentChildForm.IconChar = btnDirectorio.IconChar;
+            lblTitleChildForm.Text = "DIRECTORIO";
+        }
+
+        private void btnPyV_Click(object sender, EventArgs e)
+        {
+            if (estadoBarMenu)
+                CollapseMenu();
+            estadoBarMenu = false;
+            iconCurrentChildForm.IconChar = btnPyV.IconChar;
+            lblTitleChildForm.Text = "PERMISOS Y VACACIONES";
+        }
+
+        private void btnGestionPyV_Click(object sender, EventArgs e)
+        {
+            if (estadoBarMenu)
+                CollapseMenu();
+            estadoBarMenu = false;
+            iconCurrentChildForm.IconChar = btnGestionPyV.IconChar;
+            lblTitleChildForm.Text = "GESTIÓN DE PERMISOS Y VACACIONES";
+        }
+
+        private void btnInventario_Click(object sender, EventArgs e)
+        {
+            if (estadoBarMenu)
+                CollapseMenu();
+            estadoBarMenu = false;
+            iconCurrentChildForm.IconChar = btnInventario.IconChar;
+            lblTitleChildForm.Text = "INVENTARIO";
+        }
+
+        private void btnAyuda_Click(object sender, EventArgs e)
+        {
+            if (estadoBarMenu)
+                CollapseMenu();
+            estadoBarMenu = false;
+            iconCurrentChildForm.IconChar = btnAyuda.IconChar;
+            lblTitleChildForm.Text = "AYUDA";
+        }
+
+        private void btnAcercaDe_Click(object sender, EventArgs e)
+        {
+            if (estadoBarMenu == true)
+                CollapseMenu();
+            estadoBarMenu = false;
+            iconCurrentChildForm.IconChar = btnAcercaDe.IconChar;
+            lblTitleChildForm.Text = "ACERCA DE";
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            Form login = new frmLogin();
+            login.Show();
+            this.Dispose();
+        }
+
+        private void btnMenu_Click(object sender, EventArgs e)
+        {
+            estadoBarMenu = true;
+            CollapseMenu();
         }
     }
 }
