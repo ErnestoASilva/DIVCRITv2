@@ -227,7 +227,7 @@ namespace DIVCRITv2
         {
             AbrirFormulario<frmAltaColaboradores>();
             if (estadoBarMenu)
-                CollapseMenu();
+                //CollapseMenu();
             estadoBarMenu = false;
             iconCurrentChildForm.IconChar = btnAltaColab.IconChar;
             lblTitleChildForm.Text = "ALTA DE COLABORADORES";
@@ -236,7 +236,7 @@ namespace DIVCRITv2
         private void btnDirectorio_Click(object sender, EventArgs e)
         {
             if (estadoBarMenu)
-                CollapseMenu();
+                //CollapseMenu();
             estadoBarMenu = false;
             iconCurrentChildForm.IconChar = btnDirectorio.IconChar;
             lblTitleChildForm.Text = "DIRECTORIO";
@@ -245,7 +245,7 @@ namespace DIVCRITv2
         private void btnPyV_Click(object sender, EventArgs e)
         {
             if (estadoBarMenu)
-                CollapseMenu();
+                //CollapseMenu();
             estadoBarMenu = false;
             iconCurrentChildForm.IconChar = btnPyV.IconChar;
             lblTitleChildForm.Text = "PERMISOS Y VACACIONES";
@@ -254,7 +254,7 @@ namespace DIVCRITv2
         private void btnGestionPyV_Click(object sender, EventArgs e)
         {
             if (estadoBarMenu)
-                CollapseMenu();
+                //CollapseMenu();
             estadoBarMenu = false;
             iconCurrentChildForm.IconChar = btnGestionPyV.IconChar;
             lblTitleChildForm.Text = "GESTIÓN DE PERMISOS Y VACACIONES";
@@ -263,7 +263,7 @@ namespace DIVCRITv2
         private void btnInventario_Click(object sender, EventArgs e)
         {
             if (estadoBarMenu)
-                CollapseMenu();
+                //CollapseMenu();
             estadoBarMenu = false;
             iconCurrentChildForm.IconChar = btnInventario.IconChar;
             lblTitleChildForm.Text = "INVENTARIO";
@@ -272,7 +272,7 @@ namespace DIVCRITv2
         private void btnAyuda_Click(object sender, EventArgs e)
         {
             if (estadoBarMenu)
-                CollapseMenu();
+                //CollapseMenu();
             estadoBarMenu = false;
             iconCurrentChildForm.IconChar = btnAyuda.IconChar;
             lblTitleChildForm.Text = "AYUDA";
@@ -281,7 +281,7 @@ namespace DIVCRITv2
         private void btnAcercaDe_Click(object sender, EventArgs e)
         {
             if (estadoBarMenu == true)
-                CollapseMenu();
+                //CollapseMenu();
             estadoBarMenu = false;
             iconCurrentChildForm.IconChar = btnAcercaDe.IconChar;
             lblTitleChildForm.Text = "ACERCA DE";
