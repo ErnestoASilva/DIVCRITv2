@@ -19,9 +19,10 @@ namespace DIVCRITv2
 
         private void btnUsuario_Click(object sender, EventArgs e)
         {
+            //menu.ShowDialog();
+            this.Hide();
             frmMenu menu = new frmMenu();
-            menu.ShowDialog();
-            this.Close();
+            menu.Show();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
@@ -44,6 +45,16 @@ namespace DIVCRITv2
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void tbxUsuario_Click(object sender, EventArgs e)
+        {
+            tbxUsuario.Text = "";
+        }
+
+        private void tbxPassword_Click(object sender, EventArgs e)
+        {
+            tbxPassword.Text = "";
         }
     }
 }
