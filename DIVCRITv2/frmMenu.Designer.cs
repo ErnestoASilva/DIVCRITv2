@@ -54,13 +54,16 @@ namespace DIVCRITv2
             this.lblArea = new System.Windows.Forms.Label();
             this.lblPuesto = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pbxDivcrit = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelTitleBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).BeginInit();
+            this.panelDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDivcrit)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -78,7 +81,7 @@ namespace DIVCRITv2
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(224, 619);
+            this.panelMenu.Size = new System.Drawing.Size(224, 661);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -118,7 +121,7 @@ namespace DIVCRITv2
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 30;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 585);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 627);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(224, 34);
@@ -324,7 +327,7 @@ namespace DIVCRITv2
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(224, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(864, 60);
+            this.panelTitleBar.Size = new System.Drawing.Size(860, 60);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -362,7 +365,7 @@ namespace DIVCRITv2
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(729, 1);
+            this.btnMinimize.Location = new System.Drawing.Point(725, 1);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(45, 25);
@@ -380,7 +383,7 @@ namespace DIVCRITv2
             this.btnMaximize.IconColor = System.Drawing.Color.White;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(774, 1);
+            this.btnMaximize.Location = new System.Drawing.Point(770, 1);
             this.btnMaximize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(45, 25);
@@ -398,7 +401,7 @@ namespace DIVCRITv2
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(819, 1);
+            this.btnClose.Location = new System.Drawing.Point(815, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(45, 25);
@@ -409,10 +412,11 @@ namespace DIVCRITv2
             // panelDesktop
             // 
             this.panelDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.panelDesktop.Controls.Add(this.pbxDivcrit);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(224, 60);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(864, 559);
+            this.panelDesktop.Size = new System.Drawing.Size(860, 601);
             this.panelDesktop.TabIndex = 2;
             // 
             // pbxImagen
@@ -472,11 +476,19 @@ namespace DIVCRITv2
             this.panel2.Size = new System.Drawing.Size(224, 80);
             this.panel2.TabIndex = 0;
             // 
+            // pbxDivcrit
+            // 
+            this.pbxDivcrit.Location = new System.Drawing.Point(107, 69);
+            this.pbxDivcrit.Name = "pbxDivcrit";
+            this.pbxDivcrit.Size = new System.Drawing.Size(663, 412);
+            this.pbxDivcrit.TabIndex = 0;
+            this.pbxDivcrit.TabStop = false;
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1088, 619);
+            this.ClientSize = new System.Drawing.Size(1084, 661);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
@@ -490,9 +502,11 @@ namespace DIVCRITv2
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChildForm)).EndInit();
+            this.panelDesktop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxDivcrit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -523,5 +537,6 @@ namespace DIVCRITv2
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pbxDivcrit;
     }
 }
