@@ -81,7 +81,7 @@ namespace DIVCRITv2
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(280, 661);
+            this.panelMenu.Size = new System.Drawing.Size(236, 661);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -100,7 +100,7 @@ namespace DIVCRITv2
             this.btnAcercaDe.Location = new System.Drawing.Point(0, 449);
             this.btnAcercaDe.Name = "btnAcercaDe";
             this.btnAcercaDe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAcercaDe.Size = new System.Drawing.Size(280, 48);
+            this.btnAcercaDe.Size = new System.Drawing.Size(236, 48);
             this.btnAcercaDe.TabIndex = 7;
             this.btnAcercaDe.Tag = "   ACERCA DE";
             this.btnAcercaDe.Text = "   ACERCA DE";
@@ -124,7 +124,7 @@ namespace DIVCRITv2
             this.btnCerrarSesion.Location = new System.Drawing.Point(0, 627);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(280, 34);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(236, 34);
             this.btnCerrarSesion.TabIndex = 6;
             this.btnCerrarSesion.Tag = "   CERRAR SESIÓN";
             this.btnCerrarSesion.Text = "   CERRAR SESIÓN";
@@ -148,7 +148,7 @@ namespace DIVCRITv2
             this.btnAyuda.Location = new System.Drawing.Point(0, 401);
             this.btnAyuda.Name = "btnAyuda";
             this.btnAyuda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAyuda.Size = new System.Drawing.Size(280, 48);
+            this.btnAyuda.Size = new System.Drawing.Size(236, 48);
             this.btnAyuda.TabIndex = 5;
             this.btnAyuda.Tag = "   AYUDA";
             this.btnAyuda.Text = "   AYUDA";
@@ -172,7 +172,7 @@ namespace DIVCRITv2
             this.btnAltaColab.Location = new System.Drawing.Point(0, 353);
             this.btnAltaColab.Name = "btnAltaColab";
             this.btnAltaColab.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAltaColab.Size = new System.Drawing.Size(280, 48);
+            this.btnAltaColab.Size = new System.Drawing.Size(236, 48);
             this.btnAltaColab.TabIndex = 4;
             this.btnAltaColab.Tag = "    ALTA DE COLABORADORES";
             this.btnAltaColab.Text = "    ALTA DE COLABORADORES";
@@ -196,7 +196,7 @@ namespace DIVCRITv2
             this.btnInventario.Location = new System.Drawing.Point(0, 305);
             this.btnInventario.Name = "btnInventario";
             this.btnInventario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnInventario.Size = new System.Drawing.Size(280, 48);
+            this.btnInventario.Size = new System.Drawing.Size(236, 48);
             this.btnInventario.TabIndex = 3;
             this.btnInventario.Tag = "   INVENTARIO";
             this.btnInventario.Text = "   INVENTARIO";
@@ -220,7 +220,7 @@ namespace DIVCRITv2
             this.btnGestionPyV.Location = new System.Drawing.Point(0, 248);
             this.btnGestionPyV.Name = "btnGestionPyV";
             this.btnGestionPyV.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnGestionPyV.Size = new System.Drawing.Size(280, 57);
+            this.btnGestionPyV.Size = new System.Drawing.Size(236, 57);
             this.btnGestionPyV.TabIndex = 2;
             this.btnGestionPyV.Tag = "   GESTIÓN DE PERMISOS Y ";
             this.btnGestionPyV.Text = "   GESTIÓN DE PERMISOS Y \r\n   VACACIONES";
@@ -244,7 +244,7 @@ namespace DIVCRITv2
             this.btnPyV.Location = new System.Drawing.Point(0, 200);
             this.btnPyV.Name = "btnPyV";
             this.btnPyV.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnPyV.Size = new System.Drawing.Size(280, 48);
+            this.btnPyV.Size = new System.Drawing.Size(236, 48);
             this.btnPyV.TabIndex = 1;
             this.btnPyV.Tag = "    PERMISOS Y VACACIONES";
             this.btnPyV.Text = "    PERMISOS Y VACACIONES";
@@ -268,7 +268,7 @@ namespace DIVCRITv2
             this.btnDirectorio.Location = new System.Drawing.Point(0, 152);
             this.btnDirectorio.Name = "btnDirectorio";
             this.btnDirectorio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDirectorio.Size = new System.Drawing.Size(280, 48);
+            this.btnDirectorio.Size = new System.Drawing.Size(236, 48);
             this.btnDirectorio.TabIndex = 0;
             this.btnDirectorio.Tag = "   DIRECTORIO";
             this.btnDirectorio.Text = "   DIRECTORIO";
@@ -286,7 +286,7 @@ namespace DIVCRITv2
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(280, 152);
+            this.panel1.Size = new System.Drawing.Size(236, 152);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -299,7 +299,7 @@ namespace DIVCRITv2
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(280, 80);
+            this.panel2.Size = new System.Drawing.Size(236, 80);
             this.panel2.TabIndex = 0;
             // 
             // lblPuesto
@@ -354,7 +354,7 @@ namespace DIVCRITv2
             this.btnMenu.IconColor = System.Drawing.Color.White;
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 30;
-            this.btnMenu.Location = new System.Drawing.Point(165, 11);
+            this.btnMenu.Location = new System.Drawing.Point(174, 9);
             this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Size = new System.Drawing.Size(60, 60);
@@ -368,7 +368,7 @@ namespace DIVCRITv2
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(236, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -382,7 +382,7 @@ namespace DIVCRITv2
             this.panelTitleBar.Controls.Add(this.btnMaximize);
             this.panelTitleBar.Controls.Add(this.btnClose);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(280, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(236, 0);
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(848, 76);
             this.panelTitleBar.TabIndex = 1;
@@ -472,7 +472,7 @@ namespace DIVCRITv2
             this.panelDesktop.Controls.Add(this.pbxDivcrit);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panelDesktop.Location = new System.Drawing.Point(280, 76);
+            this.panelDesktop.Location = new System.Drawing.Point(236, 76);
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(848, 585);
             this.panelDesktop.TabIndex = 2;
