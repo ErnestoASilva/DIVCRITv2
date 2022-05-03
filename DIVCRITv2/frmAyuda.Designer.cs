@@ -153,18 +153,17 @@ namespace DIVCRITv2
             this.label8.Size = new System.Drawing.Size(738, 46);
             this.label8.TabIndex = 63;
             this.label8.Text = "Si tiene alguna otra pregunta favor de contactarse con el personal del área de\r\nT" +
-    "ecnologías de la Información(T.I)";
+    "ecnologías de la Información(T.I.)";
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.label3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.LightGray;
             this.label3.Location = new System.Drawing.Point(13, 169);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(227, 23);
+            this.label3.Size = new System.Drawing.Size(327, 23);
             this.label3.TabIndex = 58;
             this.label3.Text = "🚩Preguntas Frecuentes";
             // 
@@ -190,10 +189,10 @@ namespace DIVCRITv2
             this.label11.Location = new System.Drawing.Point(13, 234);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(1009, 23);
+            this.label11.Size = new System.Drawing.Size(1014, 23);
             this.label11.TabIndex = 64;
             this.label11.Text = "DivCrit es un sistema que permite gestionar y utilizar diversas funciones dentro " +
-    "de las labores del CRIT Sonora";
+    "de las labores del CRIT Sonora.";
             // 
             // label4
             // 
@@ -269,11 +268,11 @@ namespace DIVCRITv2
             this.label12.Location = new System.Drawing.Point(13, 308);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(901, 46);
+            this.label12.Size = new System.Drawing.Size(906, 46);
             this.label12.TabIndex = 65;
             this.label12.Text = "DivCrit es un sistema que permite pedir vacaciones o permisos, desplegar informac" +
-    "ion\r\nde los colaboradores, gestionar el inventario del área de T.I y dar de alta" +
-    " nuevos colaboradores.\r\n";
+    "ion\r\nde los colaboradores, gestionar el inventario del área de T.I. y dar de alt" +
+    "a nuevos colaboradores.\r\n";
             // 
             // label2
             // 
