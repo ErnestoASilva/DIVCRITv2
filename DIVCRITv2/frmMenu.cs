@@ -299,6 +299,5 @@ namespace DIVCRITv2
             estadoBarMenu = true;
             CollapseMenu();
         }
-
     }
 }

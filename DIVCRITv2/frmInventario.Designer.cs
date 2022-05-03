@@ -43,10 +43,11 @@ namespace DIVCRITv2
             this.cbxCampos = new System.Windows.Forms.ComboBox();
             this.tbxCampos = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxColaborador = new System.Windows.Forms.ComboBox();
+            this.cbxTipo = new System.Windows.Forms.ComboBox();
             this.cbxArea = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.tbxMarca = new System.Windows.Forms.TextBox();
             this.tbxNombre = new System.Windows.Forms.TextBox();
@@ -61,16 +62,18 @@ namespace DIVCRITv2
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.cbxTipo = new System.Windows.Forms.ComboBox();
-            this.cbxColaborador = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvInventario
             // 
+            this.dgvInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvInventario.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
             this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -184,6 +187,7 @@ namespace DIVCRITv2
             this.cbxCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.cbxCampos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxCampos.ForeColor = System.Drawing.Color.LightGray;
             this.cbxCampos.FormattingEnabled = true;
             this.cbxCampos.Location = new System.Drawing.Point(6, 25);
             this.cbxCampos.Name = "cbxCampos";
@@ -194,6 +198,7 @@ namespace DIVCRITv2
             // 
             this.tbxCampos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.tbxCampos.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxCampos.ForeColor = System.Drawing.Color.LightGray;
             this.tbxCampos.Location = new System.Drawing.Point(260, 25);
             this.tbxCampos.Name = "tbxCampos";
             this.tbxCampos.Size = new System.Drawing.Size(318, 27);
@@ -201,6 +206,8 @@ namespace DIVCRITv2
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.cbxColaborador);
             this.groupBox1.Controls.Add(this.cbxTipo);
             this.groupBox1.Controls.Add(this.cbxArea);
@@ -228,12 +235,39 @@ namespace DIVCRITv2
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // cbxColaborador
+            // 
+            this.cbxColaborador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.cbxColaborador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxColaborador.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cbxColaborador.ForeColor = System.Drawing.Color.LightGray;
+            this.cbxColaborador.FormattingEnabled = true;
+            this.cbxColaborador.Location = new System.Drawing.Point(6, 193);
+            this.cbxColaborador.Name = "cbxColaborador";
+            this.cbxColaborador.Size = new System.Drawing.Size(267, 25);
+            this.cbxColaborador.TabIndex = 20;
+            // 
+            // cbxTipo
+            // 
+            this.cbxTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.cbxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxTipo.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cbxTipo.ForeColor = System.Drawing.Color.LightGray;
+            this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Location = new System.Drawing.Point(6, 241);
+            this.cbxTipo.Name = "cbxTipo";
+            this.cbxTipo.Size = new System.Drawing.Size(267, 25);
+            this.cbxTipo.TabIndex = 19;
+            // 
             // cbxArea
             // 
             this.cbxArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.cbxArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxArea.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cbxArea.ForeColor = System.Drawing.Color.LightGray;
             this.cbxArea.FormattingEnabled = true;
             this.cbxArea.Location = new System.Drawing.Point(7, 91);
             this.cbxArea.Name = "cbxArea";
@@ -265,14 +299,6 @@ namespace DIVCRITv2
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(10, 65);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // btnActualizar
             // 
             this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
@@ -291,6 +317,7 @@ namespace DIVCRITv2
             this.tbxMarca.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.tbxMarca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxMarca.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.tbxMarca.ForeColor = System.Drawing.Color.LightGray;
             this.tbxMarca.Location = new System.Drawing.Point(6, 389);
             this.tbxMarca.Name = "tbxMarca";
             this.tbxMarca.Size = new System.Drawing.Size(267, 24);
@@ -301,6 +328,7 @@ namespace DIVCRITv2
             this.tbxNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.tbxNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxNombre.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.tbxNombre.ForeColor = System.Drawing.Color.LightGray;
             this.tbxNombre.Location = new System.Drawing.Point(6, 340);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(267, 24);
@@ -311,6 +339,7 @@ namespace DIVCRITv2
             this.cbxNoSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.cbxNoSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.cbxNoSerie.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.cbxNoSerie.ForeColor = System.Drawing.Color.LightGray;
             this.cbxNoSerie.Location = new System.Drawing.Point(6, 291);
             this.cbxNoSerie.Name = "cbxNoSerie";
             this.cbxNoSerie.Size = new System.Drawing.Size(267, 24);
@@ -321,6 +350,7 @@ namespace DIVCRITv2
             this.tbxNoOficina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.tbxNoOficina.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxNoOficina.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.tbxNoOficina.ForeColor = System.Drawing.Color.LightGray;
             this.tbxNoOficina.Location = new System.Drawing.Point(6, 144);
             this.tbxNoOficina.Name = "tbxNoOficina";
             this.tbxNoOficina.Size = new System.Drawing.Size(267, 24);
@@ -406,6 +436,8 @@ namespace DIVCRITv2
             // 
             // groupBox2
             // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.cbxCampos);
             this.groupBox2.Controls.Add(this.tbxCampos);
             this.groupBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -417,29 +449,13 @@ namespace DIVCRITv2
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Campos";
             // 
-            // cbxTipo
+            // pictureBox1
             // 
-            this.cbxTipo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.cbxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxTipo.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.cbxTipo.FormattingEnabled = true;
-            this.cbxTipo.Location = new System.Drawing.Point(6, 242);
-            this.cbxTipo.Name = "cbxTipo";
-            this.cbxTipo.Size = new System.Drawing.Size(267, 25);
-            this.cbxTipo.TabIndex = 19;
-            // 
-            // cbxColaborador
-            // 
-            this.cbxColaborador.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.cbxColaborador.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxColaborador.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cbxColaborador.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.cbxColaborador.FormattingEnabled = true;
-            this.cbxColaborador.Location = new System.Drawing.Point(6, 193);
-            this.cbxColaborador.Name = "cbxColaborador";
-            this.cbxColaborador.Size = new System.Drawing.Size(267, 25);
-            this.cbxColaborador.TabIndex = 20;
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(10, 65);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // frmInventario
             // 
@@ -456,9 +472,9 @@ namespace DIVCRITv2
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
