@@ -81,7 +81,7 @@ namespace DIVCRITv2
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(253, 711);
+            this.panelMenu.Size = new System.Drawing.Size(253, 761);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -121,7 +121,7 @@ namespace DIVCRITv2
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 30;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 677);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 727);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(253, 34);
@@ -384,7 +384,7 @@ namespace DIVCRITv2
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(253, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(931, 76);
+            this.panelTitleBar.Size = new System.Drawing.Size(981, 76);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
@@ -422,7 +422,7 @@ namespace DIVCRITv2
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(797, 1);
+            this.btnMinimize.Location = new System.Drawing.Point(847, 1);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(45, 25);
@@ -440,7 +440,7 @@ namespace DIVCRITv2
             this.btnMaximize.IconColor = System.Drawing.Color.White;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(842, 1);
+            this.btnMaximize.Location = new System.Drawing.Point(892, 1);
             this.btnMaximize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMaximize.Name = "btnMaximize";
             this.btnMaximize.Size = new System.Drawing.Size(45, 25);
@@ -458,7 +458,7 @@ namespace DIVCRITv2
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(887, 1);
+            this.btnClose.Location = new System.Drawing.Point(937, 1);
             this.btnClose.Margin = new System.Windows.Forms.Padding(2);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(45, 25);
@@ -474,7 +474,7 @@ namespace DIVCRITv2
             this.panelDesktop.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panelDesktop.Location = new System.Drawing.Point(253, 76);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(931, 635);
+            this.panelDesktop.Size = new System.Drawing.Size(981, 685);
             this.panelDesktop.TabIndex = 2;
             // 
             // pbxDivcrit
@@ -484,7 +484,7 @@ namespace DIVCRITv2
             this.pbxDivcrit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbxDivcrit.Location = new System.Drawing.Point(0, 0);
             this.pbxDivcrit.Name = "pbxDivcrit";
-            this.pbxDivcrit.Size = new System.Drawing.Size(931, 635);
+            this.pbxDivcrit.Size = new System.Drawing.Size(981, 685);
             this.pbxDivcrit.TabIndex = 0;
             this.pbxDivcrit.TabStop = false;
             // 
@@ -492,11 +492,12 @@ namespace DIVCRITv2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 711);
+            this.ClientSize = new System.Drawing.Size(1234, 761);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1250, 800);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
