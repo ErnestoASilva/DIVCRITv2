@@ -44,7 +44,7 @@ namespace DIVCRITv2
             this.cbxPuesto = new System.Windows.Forms.ComboBox();
             this.tbxOficina = new System.Windows.Forms.TextBox();
             this.tbxExtension = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            //this.label3 = new System.Windows.Forms.Label();
             this.btnOficina = new System.Windows.Forms.Label();
             this.nudDiasVacacionesPedidos = new System.Windows.Forms.NumericUpDown();
             this.dtpDiaEntrada = new System.Windows.Forms.DateTimePicker();
@@ -169,7 +169,7 @@ namespace DIVCRITv2
             this.groupBox2.Controls.Add(this.cbxPuesto);
             this.groupBox2.Controls.Add(this.tbxOficina);
             this.groupBox2.Controls.Add(this.tbxExtension);
-            this.groupBox2.Controls.Add(this.label3);
+            //this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.btnOficina);
             this.groupBox2.Controls.Add(this.nudDiasVacacionesPedidos);
             this.groupBox2.Controls.Add(this.dtpDiaEntrada);
@@ -319,7 +319,7 @@ namespace DIVCRITv2
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
+            /*this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
@@ -328,7 +328,7 @@ namespace DIVCRITv2
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 21);
             this.label3.TabIndex = 77;
-            this.label3.Text = "Extension";
+            this.label3.Text = "Extension";*/
             // 
             // btnOficina
             // 
@@ -725,12 +725,12 @@ namespace DIVCRITv2
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
+            /*this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(349, 89);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(91, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "BRNACH ANGEL";
+            this.label3.Text = "BRNACH ANGEL";*/
             // 
             // frmAltaColaboradores
             // 
@@ -803,6 +803,6 @@ namespace DIVCRITv2
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        //private System.Windows.Forms.Label label3;
     }
 }
