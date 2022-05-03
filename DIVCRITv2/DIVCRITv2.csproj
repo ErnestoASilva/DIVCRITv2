@@ -68,6 +68,24 @@
     <Compile Include="frmAltaColaboradores.Designer.cs">
       <DependentUpon>frmAltaColaboradores.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAyuda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAyuda.Designer.cs">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDirectorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDirectorio.Designer.cs">
+      <DependentUpon>frmDirectorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGestionSolicitud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionSolicitud.Designer.cs">
+      <DependentUpon>frmGestionSolicitud.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +104,12 @@
     <Compile Include="frmMenu.Designer.cs">
       <DependentUpon>frmMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSolicitudPyV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSolicitudPyV.Designer.cs">
+      <DependentUpon>frmSolicitudPyV.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAcercaDe.resx">
@@ -93,6 +117,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAltaColaboradores.resx">
       <DependentUpon>frmAltaColaboradores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAyuda.resx">
+      <DependentUpon>frmAyuda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDirectorio.resx">
+      <DependentUpon>frmDirectorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionSolicitud.resx">
+      <DependentUpon>frmGestionSolicitud.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInventario.resx">
       <DependentUpon>frmInventario.cs</DependentUpon>
@@ -102,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMenu.resx">
       <DependentUpon>frmMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSolicitudPyV.resx">
+      <DependentUpon>frmSolicitudPyV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
