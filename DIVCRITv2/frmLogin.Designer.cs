@@ -127,6 +127,7 @@ namespace DIVCRITv2
             this.tbxUsuario.TabIndex = 3;
             this.tbxUsuario.Text = "USUARIO";
             this.tbxUsuario.Click += new System.EventHandler(this.tbxUsuario_Click);
+            this.tbxUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxUsuario_KeyDown);
             // 
             // label1
             // 
@@ -189,7 +190,8 @@ namespace DIVCRITv2
             this.tbxPassword.Size = new System.Drawing.Size(283, 20);
             this.tbxPassword.TabIndex = 4;
             this.tbxPassword.Text = "CONTRASEÑA";
-            this.tbxPassword.Click += new System.EventHandler(this.tbxPassword_Click);
+            this.tbxPassword.TextChanged += new System.EventHandler(this.tbxPassword_TextChanged);
+            this.tbxPassword.Enter += new System.EventHandler(this.tbxPassword_Enter);
             // 
             // frmLogin
             // 

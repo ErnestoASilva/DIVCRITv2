@@ -32,10 +32,10 @@ namespace DIVCRITv2
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDirectorio));
             this.gbxDatos = new System.Windows.Forms.GroupBox();
             this.tbxCorreo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.tbxArea = new System.Windows.Forms.TextBox();
             this.tbxOficina = new System.Windows.Forms.TextBox();
             this.tbxExtension = new System.Windows.Forms.TextBox();
@@ -46,20 +46,18 @@ namespace DIVCRITv2
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dgvColaboradores = new System.Windows.Forms.DataGridView();
+            this.tbxBuscar = new System.Windows.Forms.TextBox();
             this.cbxTipoBusqueda = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.gbxDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColaboradores)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxDatos
             // 
-            this.gbxDatos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbxDatos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxDatos.BackColor = System.Drawing.Color.Transparent;
             this.gbxDatos.Controls.Add(this.tbxCorreo);
@@ -105,6 +103,21 @@ namespace DIVCRITv2
             this.label2.Size = new System.Drawing.Size(71, 21);
             this.label2.TabIndex = 15;
             this.label2.Text = "Correo: ";
+            // 
+            // pbxImagen
+            // 
+            this.pbxImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxImagen.BackgroundImage = global::DIVCRITv2.Properties.Resources.IconoUsuario;
+            this.pbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxImagen.Location = new System.Drawing.Point(116, 68);
+            this.pbxImagen.Name = "pbxImagen";
+            this.pbxImagen.Size = new System.Drawing.Size(181, 148);
+            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxImagen.TabIndex = 14;
+            this.pbxImagen.TabStop = false;
+            this.pbxImagen.Click += new System.EventHandler(this.pbxImagen_Click);
             // 
             // tbxArea
             // 
@@ -216,15 +229,16 @@ namespace DIVCRITv2
             this.label4.TabIndex = 0;
             this.label4.Text = "Nombre: ";
             // 
-            // dgvSolicitudes
+            // dgvColaboradores
             // 
-            this.dgvSolicitudes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dgvSolicitudes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvSolicitudes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
-            this.dgvSolicitudes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvSolicitudes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dgvSolicitudes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvColaboradores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvColaboradores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvColaboradores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
+            this.dgvColaboradores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvColaboradores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvColaboradores.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,8 +246,8 @@ namespace DIVCRITv2
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSolicitudes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvColaboradores.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvColaboradores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -241,12 +255,12 @@ namespace DIVCRITv2
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSolicitudes.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSolicitudes.EnableHeadersVisualStyles = false;
-            this.dgvSolicitudes.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvSolicitudes.Location = new System.Drawing.Point(12, 50);
-            this.dgvSolicitudes.Name = "dgvSolicitudes";
-            this.dgvSolicitudes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvColaboradores.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvColaboradores.EnableHeadersVisualStyles = false;
+            this.dgvColaboradores.GridColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvColaboradores.Location = new System.Drawing.Point(12, 50);
+            this.dgvColaboradores.Name = "dgvColaboradores";
+            this.dgvColaboradores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -254,20 +268,22 @@ namespace DIVCRITv2
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSolicitudes.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSolicitudes.RowHeadersVisible = false;
-            this.dgvSolicitudes.RowTemplate.Height = 23;
-            this.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSolicitudes.Size = new System.Drawing.Size(492, 457);
-            this.dgvSolicitudes.TabIndex = 19;
+            this.dgvColaboradores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvColaboradores.RowHeadersVisible = false;
+            this.dgvColaboradores.RowTemplate.Height = 23;
+            this.dgvColaboradores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvColaboradores.Size = new System.Drawing.Size(492, 457);
+            this.dgvColaboradores.TabIndex = 19;
+            this.dgvColaboradores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvColaboradores_CellClick);
             // 
-            // textBox1
+            // tbxBuscar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(263, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 27);
-            this.textBox1.TabIndex = 18;
+            this.tbxBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxBuscar.Location = new System.Drawing.Point(263, 17);
+            this.tbxBuscar.Name = "tbxBuscar";
+            this.tbxBuscar.Size = new System.Drawing.Size(241, 27);
+            this.tbxBuscar.TabIndex = 18;
+            this.tbxBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
             // cbxTipoBusqueda
             // 
@@ -294,20 +310,6 @@ namespace DIVCRITv2
             this.label1.TabIndex = 16;
             this.label1.Text = "Buscar por:";
             // 
-            // pbxImagen
-            // 
-            this.pbxImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbxImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxImagen.BackgroundImage")));
-            this.pbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxImagen.Location = new System.Drawing.Point(78, 40);
-            this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(257, 204);
-            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxImagen.TabIndex = 14;
-            this.pbxImagen.TabStop = false;
-            // 
             // frmDirectorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -315,16 +317,17 @@ namespace DIVCRITv2
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.ClientSize = new System.Drawing.Size(934, 515);
             this.Controls.Add(this.gbxDatos);
-            this.Controls.Add(this.dgvSolicitudes);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvColaboradores);
+            this.Controls.Add(this.tbxBuscar);
             this.Controls.Add(this.cbxTipoBusqueda);
             this.Controls.Add(this.label1);
             this.Name = "frmDirectorio";
             this.Text = "frmDirectorio";
+            this.Load += new System.EventHandler(this.frmDirectorio_Load);
             this.gbxDatos.ResumeLayout(false);
             this.gbxDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvColaboradores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,8 +349,8 @@ namespace DIVCRITv2
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dgvSolicitudes;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dgvColaboradores;
+        private System.Windows.Forms.TextBox tbxBuscar;
         private System.Windows.Forms.ComboBox cbxTipoBusqueda;
         private System.Windows.Forms.Label label1;
     }
