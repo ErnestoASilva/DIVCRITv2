@@ -29,17 +29,9 @@ namespace DIVCRITv2
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.header3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumeroOficina = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Colaborador = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NumSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MarcaProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxCampos = new System.Windows.Forms.ComboBox();
             this.tbxCampos = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -48,10 +40,11 @@ namespace DIVCRITv2
             this.cbxArea = new System.Windows.Forms.ComboBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.tbxMarca = new System.Windows.Forms.TextBox();
             this.tbxNombre = new System.Windows.Forms.TextBox();
-            this.cbxNoSerie = new System.Windows.Forms.TextBox();
+            this.tbxNoSerie = new System.Windows.Forms.TextBox();
             this.tbxNoOficina = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,15 +55,23 @@ namespace DIVCRITv2
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblAsteriscoAreaOficina = new System.Windows.Forms.Label();
+            this.lblAsteriscoNoOficina = new System.Windows.Forms.Label();
+            this.lblAsteriscoColaborador = new System.Windows.Forms.Label();
+            this.lblAsteriscoTipoProd = new System.Windows.Forms.Label();
+            this.lblAsteriscoNoSerie = new System.Windows.Forms.Label();
+            this.lblAsteriscoNomProd = new System.Windows.Forms.Label();
+            this.lblAsteriscoMarProd = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvInventario
             // 
+            this.dgvInventario.AllowUserToAddRows = false;
+            this.dgvInventario.AllowUserToDeleteRows = false;
             this.dgvInventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -79,108 +80,33 @@ namespace DIVCRITv2
             this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.DarkSlateBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.DarkSlateBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.header3,
-            this.ID,
-            this.NumeroOficina,
-            this.Colaborador,
-            this.TipoProducto,
-            this.NumSerie,
-            this.NombreProducto,
-            this.MarcaProducto});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInventario.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvInventario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInventario.EnableHeadersVisualStyles = false;
             this.dgvInventario.GridColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvInventario.Location = new System.Drawing.Point(12, 95);
             this.dgvInventario.Name = "dgvInventario";
+            this.dgvInventario.ReadOnly = true;
             this.dgvInventario.RowHeadersVisible = false;
+            this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventario.Size = new System.Drawing.Size(582, 401);
             this.dgvInventario.TabIndex = 0;
-            // 
-            // header3
-            // 
-            this.header3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.header3.HeaderText = "Area";
-            this.header3.MinimumWidth = 4;
-            this.header3.Name = "header3";
-            this.header3.ReadOnly = true;
-            this.header3.Width = 60;
-            // 
-            // ID
-            // 
-            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 4;
-            this.ID.Name = "ID";
-            this.ID.Width = 43;
-            // 
-            // NumeroOficina
-            // 
-            this.NumeroOficina.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.NumeroOficina.HeaderText = "No.Oficina";
-            this.NumeroOficina.MinimumWidth = 4;
-            this.NumeroOficina.Name = "NumeroOficina";
-            this.NumeroOficina.ReadOnly = true;
-            this.NumeroOficina.Width = 94;
-            // 
-            // Colaborador
-            // 
-            this.Colaborador.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Colaborador.HeaderText = "Colaborador";
-            this.Colaborador.MinimumWidth = 4;
-            this.Colaborador.Name = "Colaborador";
-            this.Colaborador.ReadOnly = true;
-            this.Colaborador.Width = 107;
-            // 
-            // TipoProducto
-            // 
-            this.TipoProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.TipoProducto.HeaderText = "Tipo";
-            this.TipoProducto.MinimumWidth = 4;
-            this.TipoProducto.Name = "TipoProducto";
-            this.TipoProducto.ReadOnly = true;
-            this.TipoProducto.Width = 55;
-            // 
-            // NumSerie
-            // 
-            this.NumSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.NumSerie.HeaderText = "No.Serie";
-            this.NumSerie.MinimumWidth = 4;
-            this.NumSerie.Name = "NumSerie";
-            this.NumSerie.ReadOnly = true;
-            this.NumSerie.Width = 81;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.NombreProducto.HeaderText = "Nombre";
-            this.NombreProducto.MinimumWidth = 4;
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            this.NombreProducto.Width = 79;
-            // 
-            // MarcaProducto
-            // 
-            this.MarcaProducto.HeaderText = "Marca";
-            this.MarcaProducto.MinimumWidth = 4;
-            this.MarcaProducto.Name = "MarcaProducto";
-            this.MarcaProducto.ReadOnly = true;
+            this.dgvInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvInventario_CellClick);
             // 
             // cbxCampos
             // 
@@ -189,10 +115,13 @@ namespace DIVCRITv2
             this.cbxCampos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxCampos.ForeColor = System.Drawing.Color.LightGray;
             this.cbxCampos.FormattingEnabled = true;
+            this.cbxCampos.Items.AddRange(new object[] {
+            ""});
             this.cbxCampos.Location = new System.Drawing.Point(6, 25);
             this.cbxCampos.Name = "cbxCampos";
             this.cbxCampos.Size = new System.Drawing.Size(248, 29);
             this.cbxCampos.TabIndex = 2;
+            this.cbxCampos.SelectedIndexChanged += new System.EventHandler(this.cbxCampos_SelectedIndexChanged);
             // 
             // tbxCampos
             // 
@@ -203,11 +132,19 @@ namespace DIVCRITv2
             this.tbxCampos.Name = "tbxCampos";
             this.tbxCampos.Size = new System.Drawing.Size(318, 27);
             this.tbxCampos.TabIndex = 3;
+            this.tbxCampos.TextChanged += new System.EventHandler(this.tbxCampos_TextChanged);
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.lblAsteriscoMarProd);
+            this.groupBox1.Controls.Add(this.lblAsteriscoNomProd);
+            this.groupBox1.Controls.Add(this.lblAsteriscoNoSerie);
+            this.groupBox1.Controls.Add(this.lblAsteriscoTipoProd);
+            this.groupBox1.Controls.Add(this.lblAsteriscoColaborador);
+            this.groupBox1.Controls.Add(this.lblAsteriscoNoOficina);
+            this.groupBox1.Controls.Add(this.lblAsteriscoAreaOficina);
             this.groupBox1.Controls.Add(this.cbxColaborador);
             this.groupBox1.Controls.Add(this.cbxTipo);
             this.groupBox1.Controls.Add(this.cbxArea);
@@ -217,7 +154,7 @@ namespace DIVCRITv2
             this.groupBox1.Controls.Add(this.btnActualizar);
             this.groupBox1.Controls.Add(this.tbxMarca);
             this.groupBox1.Controls.Add(this.tbxNombre);
-            this.groupBox1.Controls.Add(this.cbxNoSerie);
+            this.groupBox1.Controls.Add(this.tbxNoSerie);
             this.groupBox1.Controls.Add(this.tbxNoOficina);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -247,6 +184,8 @@ namespace DIVCRITv2
             this.cbxColaborador.Name = "cbxColaborador";
             this.cbxColaborador.Size = new System.Drawing.Size(267, 25);
             this.cbxColaborador.TabIndex = 20;
+            this.cbxColaborador.SelectedIndexChanged += new System.EventHandler(this.cbxColaborador_SelectedIndexChanged);
+            this.cbxColaborador.TextChanged += new System.EventHandler(this.cbxColaborador_TextChanged);
             // 
             // cbxTipo
             // 
@@ -256,10 +195,18 @@ namespace DIVCRITv2
             this.cbxTipo.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.cbxTipo.ForeColor = System.Drawing.Color.LightGray;
             this.cbxTipo.FormattingEnabled = true;
+            this.cbxTipo.Items.AddRange(new object[] {
+            "CPU",
+            "MONITOR",
+            "MOUSE",
+            "IMPRESORA",
+            "TECLADO",
+            "MODEM"});
             this.cbxTipo.Location = new System.Drawing.Point(6, 241);
             this.cbxTipo.Name = "cbxTipo";
             this.cbxTipo.Size = new System.Drawing.Size(267, 25);
             this.cbxTipo.TabIndex = 19;
+            this.cbxTipo.SelectedIndexChanged += new System.EventHandler(this.cbxTipo_SelectedIndexChanged);
             // 
             // cbxArea
             // 
@@ -273,6 +220,8 @@ namespace DIVCRITv2
             this.cbxArea.Name = "cbxArea";
             this.cbxArea.Size = new System.Drawing.Size(267, 25);
             this.cbxArea.TabIndex = 4;
+            this.cbxArea.SelectedIndexChanged += new System.EventHandler(this.cbxArea_SelectedIndexChanged);
+            this.cbxArea.TextChanged += new System.EventHandler(this.cbxArea_TextChanged);
             // 
             // btnAgregar
             // 
@@ -285,6 +234,7 @@ namespace DIVCRITv2
             this.btnAgregar.TabIndex = 18;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -298,6 +248,15 @@ namespace DIVCRITv2
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(-4, 11);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(10, 65);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // btnActualizar
             // 
@@ -311,6 +270,7 @@ namespace DIVCRITv2
             this.btnActualizar.TabIndex = 16;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // tbxMarca
             // 
@@ -322,6 +282,7 @@ namespace DIVCRITv2
             this.tbxMarca.Name = "tbxMarca";
             this.tbxMarca.Size = new System.Drawing.Size(267, 24);
             this.tbxMarca.TabIndex = 15;
+            this.tbxMarca.TextChanged += new System.EventHandler(this.tbxMarca_TextChanged);
             // 
             // tbxNombre
             // 
@@ -333,17 +294,19 @@ namespace DIVCRITv2
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(267, 24);
             this.tbxNombre.TabIndex = 14;
+            this.tbxNombre.TextChanged += new System.EventHandler(this.tbxNombre_TextChanged);
             // 
-            // cbxNoSerie
+            // tbxNoSerie
             // 
-            this.cbxNoSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.cbxNoSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.cbxNoSerie.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.cbxNoSerie.ForeColor = System.Drawing.Color.LightGray;
-            this.cbxNoSerie.Location = new System.Drawing.Point(6, 291);
-            this.cbxNoSerie.Name = "cbxNoSerie";
-            this.cbxNoSerie.Size = new System.Drawing.Size(267, 24);
-            this.cbxNoSerie.TabIndex = 13;
+            this.tbxNoSerie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
+            this.tbxNoSerie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbxNoSerie.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.tbxNoSerie.ForeColor = System.Drawing.Color.LightGray;
+            this.tbxNoSerie.Location = new System.Drawing.Point(6, 291);
+            this.tbxNoSerie.Name = "tbxNoSerie";
+            this.tbxNoSerie.Size = new System.Drawing.Size(267, 24);
+            this.tbxNoSerie.TabIndex = 13;
+            this.tbxNoSerie.TextChanged += new System.EventHandler(this.cbxNoSerie_TextChanged);
             // 
             // tbxNoOficina
             // 
@@ -355,6 +318,7 @@ namespace DIVCRITv2
             this.tbxNoOficina.Name = "tbxNoOficina";
             this.tbxNoOficina.Size = new System.Drawing.Size(267, 24);
             this.tbxNoOficina.TabIndex = 10;
+            this.tbxNoOficina.TextChanged += new System.EventHandler(this.tbxNoOficina_TextChanged);
             // 
             // label8
             // 
@@ -449,13 +413,89 @@ namespace DIVCRITv2
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Campos";
             // 
-            // pictureBox1
+            // lblAsteriscoAreaOficina
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(-4, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(10, 65);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.lblAsteriscoAreaOficina.AutoSize = true;
+            this.lblAsteriscoAreaOficina.BackColor = System.Drawing.Color.Transparent;
+            this.lblAsteriscoAreaOficina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsteriscoAreaOficina.ForeColor = System.Drawing.Color.Red;
+            this.lblAsteriscoAreaOficina.Location = new System.Drawing.Point(46, 71);
+            this.lblAsteriscoAreaOficina.Name = "lblAsteriscoAreaOficina";
+            this.lblAsteriscoAreaOficina.Size = new System.Drawing.Size(15, 20);
+            this.lblAsteriscoAreaOficina.TabIndex = 81;
+            this.lblAsteriscoAreaOficina.Text = "*";
+            // 
+            // lblAsteriscoNoOficina
+            // 
+            this.lblAsteriscoNoOficina.AutoSize = true;
+            this.lblAsteriscoNoOficina.BackColor = System.Drawing.Color.Transparent;
+            this.lblAsteriscoNoOficina.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsteriscoNoOficina.ForeColor = System.Drawing.Color.Red;
+            this.lblAsteriscoNoOficina.Location = new System.Drawing.Point(89, 122);
+            this.lblAsteriscoNoOficina.Name = "lblAsteriscoNoOficina";
+            this.lblAsteriscoNoOficina.Size = new System.Drawing.Size(15, 20);
+            this.lblAsteriscoNoOficina.TabIndex = 81;
+            this.lblAsteriscoNoOficina.Text = "*";
+            // 
+            // lblAsteriscoColaborador
+            // 
+            this.lblAsteriscoColaborador.AutoSize = true;
+            this.lblAsteriscoColaborador.BackColor = System.Drawing.Color.Transparent;
+            this.lblAsteriscoColaborador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsteriscoColaborador.ForeColor = System.Drawing.Color.Red;
+            this.lblAsteriscoColaborador.Location = new System.Drawing.Point(101, 170);
+            this.lblAsteriscoColaborador.Name = "lblAsteriscoColaborador";
+            this.lblAsteriscoColaborador.Size = new System.Drawing.Size(15, 20);
+            this.lblAsteriscoColaborador.TabIndex = 81;
+            this.lblAsteriscoColaborador.Text = "*";
+            // 
+            // lblAsteriscoTipoProd
+            // 
+            this.lblAsteriscoTipoProd.AutoSize = true;
+            this.lblAsteriscoTipoProd.BackColor = System.Drawing.Color.Transparent;
+            this.lblAsteriscoTipoProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsteriscoTipoProd.ForeColor = System.Drawing.Color.Red;
+            this.lblAsteriscoTipoProd.Location = new System.Drawing.Point(41, 221);
+            this.lblAsteriscoTipoProd.Name = "lblAsteriscoTipoProd";
+            this.lblAsteriscoTipoProd.Size = new System.Drawing.Size(15, 20);
+            this.lblAsteriscoTipoProd.TabIndex = 81;
+            this.lblAsteriscoTipoProd.Text = "*";
+            // 
+            // lblAsteriscoNoSerie
+            // 
+            this.lblAsteriscoNoSerie.AutoSize = true;
+            this.lblAsteriscoNoSerie.BackColor = System.Drawing.Color.Transparent;
+            this.lblAsteriscoNoSerie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsteriscoNoSerie.ForeColor = System.Drawing.Color.Red;
+            this.lblAsteriscoNoSerie.Location = new System.Drawing.Point(69, 269);
+            this.lblAsteriscoNoSerie.Name = "lblAsteriscoNoSerie";
+            this.lblAsteriscoNoSerie.Size = new System.Drawing.Size(15, 20);
+            this.lblAsteriscoNoSerie.TabIndex = 81;
+            this.lblAsteriscoNoSerie.Text = "*";
+            // 
+            // lblAsteriscoNomProd
+            // 
+            this.lblAsteriscoNomProd.AutoSize = true;
+            this.lblAsteriscoNomProd.BackColor = System.Drawing.Color.Transparent;
+            this.lblAsteriscoNomProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsteriscoNomProd.ForeColor = System.Drawing.Color.Red;
+            this.lblAsteriscoNomProd.Location = new System.Drawing.Point(70, 318);
+            this.lblAsteriscoNomProd.Name = "lblAsteriscoNomProd";
+            this.lblAsteriscoNomProd.Size = new System.Drawing.Size(15, 20);
+            this.lblAsteriscoNomProd.TabIndex = 81;
+            this.lblAsteriscoNomProd.Text = "*";
+            // 
+            // lblAsteriscoMarProd
+            // 
+            this.lblAsteriscoMarProd.AutoSize = true;
+            this.lblAsteriscoMarProd.BackColor = System.Drawing.Color.Transparent;
+            this.lblAsteriscoMarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAsteriscoMarProd.ForeColor = System.Drawing.Color.Red;
+            this.lblAsteriscoMarProd.Location = new System.Drawing.Point(59, 367);
+            this.lblAsteriscoMarProd.Name = "lblAsteriscoMarProd";
+            this.lblAsteriscoMarProd.Size = new System.Drawing.Size(15, 20);
+            this.lblAsteriscoMarProd.TabIndex = 81;
+            this.lblAsteriscoMarProd.Text = "*";
             // 
             // frmInventario
             // 
@@ -469,12 +509,13 @@ namespace DIVCRITv2
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Name = "frmInventario";
             this.Text = "frmInventario";
+            this.Load += new System.EventHandler(this.frmInventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -482,14 +523,6 @@ namespace DIVCRITv2
         #endregion
 
         private System.Windows.Forms.DataGridView dgvInventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn header3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumeroOficina;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Colaborador;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NumSerie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MarcaProducto;
         private System.Windows.Forms.ComboBox cbxCampos;
         private System.Windows.Forms.TextBox tbxCampos;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -500,7 +533,7 @@ namespace DIVCRITv2
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.TextBox tbxMarca;
         private System.Windows.Forms.TextBox tbxNombre;
-        private System.Windows.Forms.TextBox cbxNoSerie;
+        private System.Windows.Forms.TextBox tbxNoSerie;
         private System.Windows.Forms.TextBox tbxNoOficina;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -513,5 +546,12 @@ namespace DIVCRITv2
         private System.Windows.Forms.ComboBox cbxArea;
         private System.Windows.Forms.ComboBox cbxColaborador;
         private System.Windows.Forms.ComboBox cbxTipo;
+        private System.Windows.Forms.Label lblAsteriscoMarProd;
+        private System.Windows.Forms.Label lblAsteriscoNomProd;
+        private System.Windows.Forms.Label lblAsteriscoNoSerie;
+        private System.Windows.Forms.Label lblAsteriscoTipoProd;
+        private System.Windows.Forms.Label lblAsteriscoColaborador;
+        private System.Windows.Forms.Label lblAsteriscoNoOficina;
+        private System.Windows.Forms.Label lblAsteriscoAreaOficina;
     }
 }

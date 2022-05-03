@@ -41,9 +41,7 @@ namespace DIVCRITv2
             this.btnDirectorio = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lblPuesto = new System.Windows.Forms.Label();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
-            this.lblArea = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btnMenu = new FontAwesome.Sharp.IconButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -292,59 +290,36 @@ namespace DIVCRITv2
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(36)))), ((int)(((byte)(163)))));
-            this.panel2.Controls.Add(this.lblPuesto);
             this.panel2.Controls.Add(this.pbxImagen);
-            this.panel2.Controls.Add(this.lblArea);
             this.panel2.Controls.Add(this.lblNombre);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 74);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(253, 80);
+            this.panel2.Size = new System.Drawing.Size(253, 78);
             this.panel2.TabIndex = 0;
-            // 
-            // lblPuesto
-            // 
-            this.lblPuesto.AutoSize = true;
-            this.lblPuesto.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPuesto.ForeColor = System.Drawing.Color.White;
-            this.lblPuesto.Location = new System.Drawing.Point(69, 55);
-            this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(63, 17);
-            this.lblPuesto.TabIndex = 2;
-            this.lblPuesto.Text = "[PUESTO]";
             // 
             // pbxImagen
             // 
-            this.pbxImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxImagen.BackgroundImage")));
+            this.pbxImagen.BackgroundImage = global::DIVCRITv2.Properties.Resources.IconoUsuario;
             this.pbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxImagen.InitialImage = null;
             this.pbxImagen.Location = new System.Drawing.Point(12, 6);
             this.pbxImagen.Name = "pbxImagen";
             this.pbxImagen.Size = new System.Drawing.Size(51, 66);
+            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxImagen.TabIndex = 0;
             this.pbxImagen.TabStop = false;
             // 
-            // lblArea
-            // 
-            this.lblArea.AutoSize = true;
-            this.lblArea.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArea.ForeColor = System.Drawing.Color.White;
-            this.lblArea.Location = new System.Drawing.Point(69, 31);
-            this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(51, 17);
-            this.lblArea.TabIndex = 1;
-            this.lblArea.Text = "[AREA]";
-            // 
             // lblNombre
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
             this.lblNombre.Location = new System.Drawing.Point(69, 6);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(72, 17);
+            this.lblNombre.Size = new System.Drawing.Size(175, 66);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "[NOMBRE]";
+            this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnMenu
             // 
@@ -386,6 +361,7 @@ namespace DIVCRITv2
             this.panelTitleBar.Name = "panelTitleBar";
             this.panelTitleBar.Size = new System.Drawing.Size(981, 76);
             this.panelTitleBar.TabIndex = 1;
+            this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
             // 
             // lblTitleChildForm
@@ -501,11 +477,11 @@ namespace DIVCRITv2
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
+            this.Load += new System.EventHandler(this.frmMenu_Load);
             this.Resize += new System.EventHandler(this.Menu_Resize);
             this.panelMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelTitleBar.ResumeLayout(false);
@@ -538,8 +514,6 @@ namespace DIVCRITv2
         private FontAwesome.Sharp.IconButton btnAcercaDe;
         private FontAwesome.Sharp.IconPictureBox iconCurrentChildForm;
         private System.Windows.Forms.Label lblTitleChildForm;
-        private System.Windows.Forms.Label lblPuesto;
-        private System.Windows.Forms.Label lblArea;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.Panel panel2;

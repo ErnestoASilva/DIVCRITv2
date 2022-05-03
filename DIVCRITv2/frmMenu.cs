@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -29,6 +31,12 @@ namespace DIVCRITv2
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        //static string cadena = "Server=tutuli;Database=SISTEMA_CRIT;User Id=sa;Password=Sistemas21;";
+        public static string cadena = "Data Source = Ernesto-PC; Initial Catalog =SISTEMA_CRIT;Persist Security Info=True;User ID = Admin; Password = admin1";
+        public SqlConnection conexion = new SqlConnection(cadena);
+        public string tipoUsuario; /*!< Tipo de permiso solicitado. */
+        public int nomina; /*!<  Es la nómina del colaborador, la cuál funciona como llave primaria de la tabla de colaboradores en la base de datos. */
 
         private void panelTitleBar_MouseDown(object sender, MouseEventArgs e)
         {
@@ -90,8 +98,8 @@ namespace DIVCRITv2
                 pictureBox1.Visible = false;
                 pbxImagen.Location = new Point(pbxImagen.Location.X + 12, pbxImagen.Location.Y);
                 lblNombre.Visible = false;
-                lblArea.Visible = false;
-                lblPuesto.Visible = false;
+                //lblArea.Visible = false;
+                //lblPuesto.Visible = false;
                 btnMenu.Dock = DockStyle.Top;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -106,8 +114,8 @@ namespace DIVCRITv2
                 pictureBox1.Visible = true;
                 pbxImagen.Location = new Point(pbxImagen.Location.X - 12, pbxImagen.Location.Y);
                 lblNombre.Visible = true;
-                lblArea.Visible = true;
-                lblPuesto.Visible = true;
+                //lblArea.Visible = true;
+                //lblPuesto.Visible = true;
                 btnMenu.Dock = DockStyle.None;
                 foreach (Button menuButton in panelMenu.Controls.OfType<Button>())
                 {
@@ -251,16 +259,35 @@ namespace DIVCRITv2
             estadoBarMenu = false;
             iconCurrentChildForm.IconChar = btnPyV.IconChar;
             lblTitleChildForm.Text = "PERMISOS Y VACACIONES";
+
         }
 
         private void btnGestionPyV_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<frmGestionSolicitud>();
-            if (estadoBarMenu)
+
+
+            //SI EL TIPO DE USUARIO ES VACACIONES, EL BOTON DE CHECKIN LOS LLEVARÁ AL FORMULARIO PARA ACTUALIZAR SUS DATOS
+            // DE PERMISOS VACACIONALES.
+            if (tipoUsuario == "vacaciones")
+            {
+                //AbrirFormulario<frmGestionSolicitud>();
+                if (estadoBarMenu)
                 //CollapseMenu();
-            estadoBarMenu = false;
-            iconCurrentChildForm.IconChar = btnGestionPyV.IconChar;
-            lblTitleChildForm.Text = "GESTIÓN DE PERMISOS Y VACACIONES";
+                estadoBarMenu = false;
+                iconCurrentChildForm.IconChar = btnGestionPyV.IconChar;
+                lblTitleChildForm.Text = "GESTIÓN DE PERMISOS Y VACACIONES";
+            }
+            else if (tipoUsuario == "admin")
+            {
+                //PARA LOS ADMINISTRADORES, ESTE BOTON LLEVA AL FORMULARIO PARA ACTUALIZAR TODOS LOS DATOS DEL USUARIO, ASÍ COMO
+                // AGREGAR NUEVOS O BORRAR EXISTENTES.
+                AbrirFormulario<frmGestionSolicitud>();
+                if (estadoBarMenu)
+                //CollapseMenu();
+                estadoBarMenu = false;
+                iconCurrentChildForm.IconChar = btnGestionPyV.IconChar;
+                lblTitleChildForm.Text = "GESTIÓN DE PERMISOS Y VACACIONES";
+            }
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
@@ -304,6 +331,89 @@ namespace DIVCRITv2
         {
             estadoBarMenu = true;
             CollapseMenu();
+        }
+
+        private void panelTitleBar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+            //CREACIÓN Y EJECUCIÓN DE LA CONSULTA PARA OBTENER LOS DATOS DE LA PERSONA QUE ACANA DE INICIAR SESIÓN
+            conexion.Open();
+            string consulta = ("SELECT nomina, nombre, correo, puesto, area FROM COLABORADORES WHERE correo = " + "'" + VariablesGlobales.emailUsuario + "';");
+            SqlCommand command = new SqlCommand(consulta, conexion);
+            SqlDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                nomina = (int)reader["nomina"];       
+                lblNombre.Text = reader["nombre"] as string;
+                //lblPuesto.Text = reader["puesto"] as string;
+                //lblArea.Text = reader["area"] as string;
+            }
+
+            conexion.Close();
+
+            conexion.Open();
+
+            try
+            {
+                SqlCommand comandoFoto = new SqlCommand("SELECT imagen FROM COLABORADORES WHERE nomina = " + nomina, conexion);
+                byte[] img = (byte[])comandoFoto.ExecuteScalar();
+                MemoryStream ms = new MemoryStream(img);
+                pbxImagen.BackgroundImage = Image.FromStream(ms);
+
+            }
+            catch (Exception)
+            {
+                pbxImagen.BackgroundImage = Properties.Resources.IconoUsuario;
+            }
+
+            conexion.Close();
+
+            //DEPENDIENDO DEL TIPO DE USUARIO DETECTADO ALGUNOS BOTONES SERÁN DESACTIVADOS
+            tipoUsuario = VariablesGlobales.tipoUsuario;
+            switch (tipoUsuario)
+            {
+                //ADMIN PUEDE ACCESAR TODOS LOS BOTONES
+                case "admin":
+                    btnDirectorio.Visible = true;
+                    btnPyV.Visible = true;
+                    btnGestionPyV.Visible = true;
+                    btnInventario.Visible = true;
+                    btnAltaColab.Visible = true;
+                    break;
+
+                //JEFE SOLO VA A PODER ACCESAR A LAS SOLICITUDES VACACIONALES, POR LO QUE SE DESHABILITA CAUS Y CHECADOR
+                case "jefe":
+                    btnDirectorio.Visible = true;
+                    btnPyV.Visible = true;
+                    btnGestionPyV.Visible = true;
+                    btnInventario.Visible = false;
+                    btnAltaColab.Visible = false;
+                    break;
+
+                //LOS USUARIOS CON EL DERECHO DE VACACIONES SON LOS QUE PUEDEN ACCESAR A LA ACTUALIZACIÓN DE PERMISOS VACACIONALES
+                // Y QUE PROCESAN LAS SOLICITUDES DE TODOS LOS COLABORADORES.
+                case "vacaciones":
+                    btnDirectorio.Visible = true;
+                    btnPyV.Visible = true;
+                    btnGestionPyV.Visible = true;
+                    btnInventario.Visible = false;
+                    btnAltaColab.Visible = false;
+                    break;
+
+                default:
+                    //CUALQUIER OTRO USUARIO DETECTADO NO PUEDE ACCESAR A LAS SECCIONES MENCIONADAS ANTERIORMENTE
+                    btnDirectorio.Visible = true;
+                    btnPyV.Visible = true;
+                    btnGestionPyV.Visible = false;
+                    btnInventario.Visible = false;
+                    btnAltaColab.Visible = false;
+                    break;
+            }
         }
     }
 }
