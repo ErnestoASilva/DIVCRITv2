@@ -298,5 +298,10 @@ namespace DIVCRITv2
             estadoBarMenu = true;
             CollapseMenu();
         }
+
+        private void frmMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
