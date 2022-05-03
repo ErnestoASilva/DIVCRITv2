@@ -14,6 +14,7 @@ namespace DIVCRITv2
     {
         public frmGestionSolicitud()
         {
+            //hola
             InitializeComponent();
         }
     }
