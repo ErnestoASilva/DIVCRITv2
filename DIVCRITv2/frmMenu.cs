@@ -235,6 +235,7 @@ namespace DIVCRITv2
 
         private void btnDirectorio_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmDirectorio>();
             if (estadoBarMenu)
                 //CollapseMenu();
             estadoBarMenu = false;
@@ -244,6 +245,7 @@ namespace DIVCRITv2
 
         private void btnPyV_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmSolicitudPyV>();
             if (estadoBarMenu)
                 //CollapseMenu();
             estadoBarMenu = false;
@@ -253,6 +255,7 @@ namespace DIVCRITv2
 
         private void btnGestionPyV_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmGestionSolicitud>();
             if (estadoBarMenu)
                 //CollapseMenu();
             estadoBarMenu = false;
@@ -262,6 +265,7 @@ namespace DIVCRITv2
 
         private void btnInventario_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmInventario>();
             if (estadoBarMenu)
                 //CollapseMenu();
             estadoBarMenu = false;
@@ -271,6 +275,7 @@ namespace DIVCRITv2
 
         private void btnAyuda_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmAyuda>();
             if (estadoBarMenu)
                 //CollapseMenu();
             estadoBarMenu = false;
@@ -280,6 +285,7 @@ namespace DIVCRITv2
 
         private void btnAcercaDe_Click(object sender, EventArgs e)
         {
+            AbrirFormulario<frmAcercaDe>();
             if (estadoBarMenu == true)
                 //CollapseMenu();
             estadoBarMenu = false;
