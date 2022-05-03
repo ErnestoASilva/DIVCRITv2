@@ -164,7 +164,7 @@ namespace DIVCRITv2
             this.label3.Location = new System.Drawing.Point(13, 169);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(228, 23);
+            this.label3.Size = new System.Drawing.Size(227, 23);
             this.label3.TabIndex = 58;
             this.label3.Text = "🚩Preguntas Frecuentes";
             // 
@@ -292,6 +292,7 @@ namespace DIVCRITv2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1178, 973);
             this.Controls.Add(this.label16);
