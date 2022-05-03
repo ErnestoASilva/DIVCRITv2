@@ -177,7 +177,7 @@ namespace DIVCRITv2
             this.tabVacaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabVacaciones.Location = new System.Drawing.Point(4, 30);
             this.tabVacaciones.Name = "tabVacaciones";
-            this.tabVacaciones.Size = new System.Drawing.Size(469, 527);
+            this.tabVacaciones.Size = new System.Drawing.Size(461, 527);
             this.tabVacaciones.TabIndex = 3;
             this.tabVacaciones.Text = "Vacaciones";
             // 
@@ -733,7 +733,7 @@ namespace DIVCRITv2
             this.tabSinGoce.Location = new System.Drawing.Point(4, 30);
             this.tabSinGoce.Name = "tabSinGoce";
             this.tabSinGoce.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSinGoce.Size = new System.Drawing.Size(469, 527);
+            this.tabSinGoce.Size = new System.Drawing.Size(461, 527);
             this.tabSinGoce.TabIndex = 1;
             this.tabSinGoce.Text = "Sin Goce";
             // 
@@ -856,7 +856,7 @@ namespace DIVCRITv2
             this.tabHoras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabHoras.Location = new System.Drawing.Point(4, 30);
             this.tabHoras.Name = "tabHoras";
-            this.tabHoras.Size = new System.Drawing.Size(469, 527);
+            this.tabHoras.Size = new System.Drawing.Size(461, 527);
             this.tabHoras.TabIndex = 2;
             this.tabHoras.Text = "Horas";
             // 

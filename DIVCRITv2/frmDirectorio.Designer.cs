@@ -29,13 +29,14 @@ namespace DIVCRITv2
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDirectorio));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDirectorio));
             this.gbxDatos = new System.Windows.Forms.GroupBox();
             this.tbxCorreo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.tbxArea = new System.Windows.Forms.TextBox();
             this.tbxOficina = new System.Windows.Forms.TextBox();
             this.tbxExtension = new System.Windows.Forms.TextBox();
@@ -47,13 +48,12 @@ namespace DIVCRITv2
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxBuscar = new System.Windows.Forms.TextBox();
             this.cbxTipoBusqueda = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.gbxDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxDatos
@@ -105,6 +105,20 @@ namespace DIVCRITv2
             this.label2.Size = new System.Drawing.Size(71, 21);
             this.label2.TabIndex = 15;
             this.label2.Text = "Correo: ";
+            // 
+            // pbxImagen
+            // 
+            this.pbxImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxImagen.BackgroundImage")));
+            this.pbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxImagen.Location = new System.Drawing.Point(78, 40);
+            this.pbxImagen.Name = "pbxImagen";
+            this.pbxImagen.Size = new System.Drawing.Size(257, 204);
+            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxImagen.TabIndex = 14;
+            this.pbxImagen.TabStop = false;
             // 
             // tbxArea
             // 
@@ -261,13 +275,13 @@ namespace DIVCRITv2
             this.dgvSolicitudes.Size = new System.Drawing.Size(492, 457);
             this.dgvSolicitudes.TabIndex = 19;
             // 
-            // textBox1
+            // tbxBuscar
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(263, 17);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(241, 27);
-            this.textBox1.TabIndex = 18;
+            this.tbxBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxBuscar.Location = new System.Drawing.Point(263, 17);
+            this.tbxBuscar.Name = "tbxBuscar";
+            this.tbxBuscar.Size = new System.Drawing.Size(241, 27);
+            this.tbxBuscar.TabIndex = 18;
             // 
             // cbxTipoBusqueda
             // 
@@ -294,20 +308,6 @@ namespace DIVCRITv2
             this.label1.TabIndex = 16;
             this.label1.Text = "Buscar por:";
             // 
-            // pbxImagen
-            // 
-            this.pbxImagen.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbxImagen.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxImagen.BackgroundImage")));
-            this.pbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxImagen.Location = new System.Drawing.Point(78, 40);
-            this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(257, 204);
-            this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pbxImagen.TabIndex = 14;
-            this.pbxImagen.TabStop = false;
-            // 
             // frmDirectorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,15 +316,15 @@ namespace DIVCRITv2
             this.ClientSize = new System.Drawing.Size(934, 515);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.dgvSolicitudes);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxBuscar);
             this.Controls.Add(this.cbxTipoBusqueda);
             this.Controls.Add(this.label1);
             this.Name = "frmDirectorio";
             this.Text = "frmDirectorio";
             this.gbxDatos.ResumeLayout(false);
             this.gbxDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -347,7 +347,7 @@ namespace DIVCRITv2
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dgvSolicitudes;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxBuscar;
         private System.Windows.Forms.ComboBox cbxTipoBusqueda;
         private System.Windows.Forms.Label label1;
     }
