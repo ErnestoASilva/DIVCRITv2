@@ -80,6 +80,12 @@
     <Compile Include="frmDirectorio.Designer.cs">
       <DependentUpon>frmDirectorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmGestionColaboradoresRH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGestionColaboradoresRH.Designer.cs">
+      <DependentUpon>frmGestionColaboradoresRH.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGestionSolicitud.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDirectorio.resx">
       <DependentUpon>frmDirectorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGestionColaboradoresRH.resx">
+      <DependentUpon>frmGestionColaboradoresRH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestionSolicitud.resx">
       <DependentUpon>frmGestionSolicitud.cs</DependentUpon>

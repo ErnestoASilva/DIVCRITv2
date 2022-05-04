@@ -53,6 +53,7 @@ namespace DIVCRITv2
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panelDesktop = new System.Windows.Forms.Panel();
             this.pbxDivcrit = new System.Windows.Forms.PictureBox();
+            this.btnGestionRH = new FontAwesome.Sharp.IconButton();
             this.panelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,6 +71,7 @@ namespace DIVCRITv2
             this.panelMenu.Controls.Add(this.btnAcercaDe);
             this.panelMenu.Controls.Add(this.btnCerrarSesion);
             this.panelMenu.Controls.Add(this.btnAyuda);
+            this.panelMenu.Controls.Add(this.btnGestionRH);
             this.panelMenu.Controls.Add(this.btnAltaColab);
             this.panelMenu.Controls.Add(this.btnInventario);
             this.panelMenu.Controls.Add(this.btnGestionPyV);
@@ -78,8 +80,9 @@ namespace DIVCRITv2
             this.panelMenu.Controls.Add(this.panel1);
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(253, 761);
+            this.panelMenu.Size = new System.Drawing.Size(337, 937);
             this.panelMenu.TabIndex = 0;
             this.panelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMenu_Paint);
             // 
@@ -95,10 +98,11 @@ namespace DIVCRITv2
             this.btnAcercaDe.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAcercaDe.IconSize = 30;
             this.btnAcercaDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAcercaDe.Location = new System.Drawing.Point(0, 449);
+            this.btnAcercaDe.Location = new System.Drawing.Point(0, 611);
+            this.btnAcercaDe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAcercaDe.Name = "btnAcercaDe";
-            this.btnAcercaDe.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAcercaDe.Size = new System.Drawing.Size(253, 48);
+            this.btnAcercaDe.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnAcercaDe.Size = new System.Drawing.Size(337, 59);
             this.btnAcercaDe.TabIndex = 7;
             this.btnAcercaDe.Tag = "   ACERCA DE";
             this.btnAcercaDe.Text = "   ACERCA DE";
@@ -119,10 +123,11 @@ namespace DIVCRITv2
             this.btnCerrarSesion.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCerrarSesion.IconSize = 30;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 727);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 895);
+            this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
-            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(253, 34);
+            this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(337, 42);
             this.btnCerrarSesion.TabIndex = 6;
             this.btnCerrarSesion.Tag = "   CERRAR SESIÓN";
             this.btnCerrarSesion.Text = "   CERRAR SESIÓN";
@@ -143,10 +148,11 @@ namespace DIVCRITv2
             this.btnAyuda.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAyuda.IconSize = 30;
             this.btnAyuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAyuda.Location = new System.Drawing.Point(0, 401);
+            this.btnAyuda.Location = new System.Drawing.Point(0, 552);
+            this.btnAyuda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAyuda.Size = new System.Drawing.Size(253, 48);
+            this.btnAyuda.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnAyuda.Size = new System.Drawing.Size(337, 59);
             this.btnAyuda.TabIndex = 5;
             this.btnAyuda.Tag = "   AYUDA";
             this.btnAyuda.Text = "   AYUDA";
@@ -167,13 +173,14 @@ namespace DIVCRITv2
             this.btnAltaColab.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnAltaColab.IconSize = 30;
             this.btnAltaColab.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAltaColab.Location = new System.Drawing.Point(0, 353);
+            this.btnAltaColab.Location = new System.Drawing.Point(0, 434);
+            this.btnAltaColab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAltaColab.Name = "btnAltaColab";
-            this.btnAltaColab.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnAltaColab.Size = new System.Drawing.Size(253, 48);
+            this.btnAltaColab.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnAltaColab.Size = new System.Drawing.Size(337, 59);
             this.btnAltaColab.TabIndex = 4;
-            this.btnAltaColab.Tag = "    ALTA DE COLABORADORES";
-            this.btnAltaColab.Text = "    ALTA DE COLABORADORES";
+            this.btnAltaColab.Tag = "    GESTIÓN DE COLABORADORES";
+            this.btnAltaColab.Text = "    GESTIÓN DE COLABORADORES";
             this.btnAltaColab.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAltaColab.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAltaColab.UseVisualStyleBackColor = true;
@@ -191,10 +198,11 @@ namespace DIVCRITv2
             this.btnInventario.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnInventario.IconSize = 30;
             this.btnInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInventario.Location = new System.Drawing.Point(0, 305);
+            this.btnInventario.Location = new System.Drawing.Point(0, 375);
+            this.btnInventario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnInventario.Name = "btnInventario";
-            this.btnInventario.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnInventario.Size = new System.Drawing.Size(253, 48);
+            this.btnInventario.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnInventario.Size = new System.Drawing.Size(337, 59);
             this.btnInventario.TabIndex = 3;
             this.btnInventario.Tag = "   INVENTARIO";
             this.btnInventario.Text = "   INVENTARIO";
@@ -215,10 +223,11 @@ namespace DIVCRITv2
             this.btnGestionPyV.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGestionPyV.IconSize = 30;
             this.btnGestionPyV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGestionPyV.Location = new System.Drawing.Point(0, 248);
+            this.btnGestionPyV.Location = new System.Drawing.Point(0, 305);
+            this.btnGestionPyV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGestionPyV.Name = "btnGestionPyV";
-            this.btnGestionPyV.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnGestionPyV.Size = new System.Drawing.Size(253, 57);
+            this.btnGestionPyV.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnGestionPyV.Size = new System.Drawing.Size(337, 70);
             this.btnGestionPyV.TabIndex = 2;
             this.btnGestionPyV.Tag = "   GESTIÓN DE PERMISOS Y ";
             this.btnGestionPyV.Text = "   GESTIÓN DE PERMISOS Y \r\n   VACACIONES";
@@ -239,10 +248,11 @@ namespace DIVCRITv2
             this.btnPyV.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnPyV.IconSize = 30;
             this.btnPyV.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPyV.Location = new System.Drawing.Point(0, 200);
+            this.btnPyV.Location = new System.Drawing.Point(0, 246);
+            this.btnPyV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPyV.Name = "btnPyV";
-            this.btnPyV.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnPyV.Size = new System.Drawing.Size(253, 48);
+            this.btnPyV.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnPyV.Size = new System.Drawing.Size(337, 59);
             this.btnPyV.TabIndex = 1;
             this.btnPyV.Tag = "    PERMISOS Y VACACIONES";
             this.btnPyV.Text = "    PERMISOS Y VACACIONES";
@@ -263,10 +273,11 @@ namespace DIVCRITv2
             this.btnDirectorio.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnDirectorio.IconSize = 30;
             this.btnDirectorio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDirectorio.Location = new System.Drawing.Point(0, 152);
+            this.btnDirectorio.Location = new System.Drawing.Point(0, 187);
+            this.btnDirectorio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnDirectorio.Name = "btnDirectorio";
-            this.btnDirectorio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnDirectorio.Size = new System.Drawing.Size(253, 48);
+            this.btnDirectorio.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnDirectorio.Size = new System.Drawing.Size(337, 59);
             this.btnDirectorio.TabIndex = 0;
             this.btnDirectorio.Tag = "   DIRECTORIO";
             this.btnDirectorio.Text = "   DIRECTORIO";
@@ -283,8 +294,9 @@ namespace DIVCRITv2
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(253, 152);
+            this.panel1.Size = new System.Drawing.Size(337, 187);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -293,9 +305,10 @@ namespace DIVCRITv2
             this.panel2.Controls.Add(this.pbxImagen);
             this.panel2.Controls.Add(this.lblNombre);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 74);
+            this.panel2.Location = new System.Drawing.Point(0, 91);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(253, 78);
+            this.panel2.Size = new System.Drawing.Size(337, 96);
             this.panel2.TabIndex = 0;
             // 
             // pbxImagen
@@ -303,9 +316,10 @@ namespace DIVCRITv2
             this.pbxImagen.BackgroundImage = global::DIVCRITv2.Properties.Resources.IconoUsuario;
             this.pbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxImagen.InitialImage = null;
-            this.pbxImagen.Location = new System.Drawing.Point(12, 6);
+            this.pbxImagen.Location = new System.Drawing.Point(16, 7);
+            this.pbxImagen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(51, 66);
+            this.pbxImagen.Size = new System.Drawing.Size(68, 81);
             this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxImagen.TabIndex = 0;
             this.pbxImagen.TabStop = false;
@@ -314,9 +328,10 @@ namespace DIVCRITv2
             // 
             this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(69, 6);
+            this.lblNombre.Location = new System.Drawing.Point(92, 7);
+            this.lblNombre.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(175, 66);
+            this.lblNombre.Size = new System.Drawing.Size(233, 81);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "[NOMBRE]";
             this.lblNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -329,10 +344,10 @@ namespace DIVCRITv2
             this.btnMenu.IconColor = System.Drawing.Color.White;
             this.btnMenu.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMenu.IconSize = 30;
-            this.btnMenu.Location = new System.Drawing.Point(175, 9);
-            this.btnMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMenu.Location = new System.Drawing.Point(233, 11);
+            this.btnMenu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMenu.Name = "btnMenu";
-            this.btnMenu.Size = new System.Drawing.Size(60, 60);
+            this.btnMenu.Size = new System.Drawing.Size(80, 74);
             this.btnMenu.TabIndex = 0;
             this.btnMenu.UseVisualStyleBackColor = true;
             this.btnMenu.Click += new System.EventHandler(this.btnMenu_Click);
@@ -342,8 +357,9 @@ namespace DIVCRITv2
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(253, 74);
+            this.pictureBox1.Size = new System.Drawing.Size(337, 91);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -357,9 +373,10 @@ namespace DIVCRITv2
             this.panelTitleBar.Controls.Add(this.btnMaximize);
             this.panelTitleBar.Controls.Add(this.btnClose);
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleBar.Location = new System.Drawing.Point(253, 0);
+            this.panelTitleBar.Location = new System.Drawing.Point(337, 0);
+            this.panelTitleBar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(981, 76);
+            this.panelTitleBar.Size = new System.Drawing.Size(1308, 94);
             this.panelTitleBar.TabIndex = 1;
             this.panelTitleBar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelTitleBar_Paint);
             this.panelTitleBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelTitleBar_MouseDown);
@@ -369,7 +386,8 @@ namespace DIVCRITv2
             this.lblTitleChildForm.AutoSize = true;
             this.lblTitleChildForm.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitleChildForm.ForeColor = System.Drawing.Color.White;
-            this.lblTitleChildForm.Location = new System.Drawing.Point(54, 18);
+            this.lblTitleChildForm.Location = new System.Drawing.Point(72, 22);
+            this.lblTitleChildForm.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitleChildForm.Name = "lblTitleChildForm";
             this.lblTitleChildForm.Size = new System.Drawing.Size(64, 21);
             this.lblTitleChildForm.TabIndex = 4;
@@ -381,9 +399,11 @@ namespace DIVCRITv2
             this.iconCurrentChildForm.IconChar = FontAwesome.Sharp.IconChar.Home;
             this.iconCurrentChildForm.IconColor = System.Drawing.Color.White;
             this.iconCurrentChildForm.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconCurrentChildForm.Location = new System.Drawing.Point(16, 12);
+            this.iconCurrentChildForm.IconSize = 39;
+            this.iconCurrentChildForm.Location = new System.Drawing.Point(21, 15);
+            this.iconCurrentChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.iconCurrentChildForm.Name = "iconCurrentChildForm";
-            this.iconCurrentChildForm.Size = new System.Drawing.Size(32, 32);
+            this.iconCurrentChildForm.Size = new System.Drawing.Size(43, 39);
             this.iconCurrentChildForm.TabIndex = 3;
             this.iconCurrentChildForm.TabStop = false;
             // 
@@ -398,10 +418,10 @@ namespace DIVCRITv2
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(847, 1);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimize.Location = new System.Drawing.Point(1129, 1);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(45, 25);
+            this.btnMinimize.Size = new System.Drawing.Size(60, 31);
             this.btnMinimize.TabIndex = 2;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
@@ -416,10 +436,10 @@ namespace DIVCRITv2
             this.btnMaximize.IconColor = System.Drawing.Color.White;
             this.btnMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMaximize.IconSize = 20;
-            this.btnMaximize.Location = new System.Drawing.Point(892, 1);
-            this.btnMaximize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMaximize.Location = new System.Drawing.Point(1189, 1);
+            this.btnMaximize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMaximize.Name = "btnMaximize";
-            this.btnMaximize.Size = new System.Drawing.Size(45, 25);
+            this.btnMaximize.Size = new System.Drawing.Size(60, 31);
             this.btnMaximize.TabIndex = 2;
             this.btnMaximize.UseVisualStyleBackColor = false;
             this.btnMaximize.Click += new System.EventHandler(this.btnMaximize_Click);
@@ -434,10 +454,10 @@ namespace DIVCRITv2
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(937, 1);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(1249, 1);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 25);
+            this.btnClose.Size = new System.Drawing.Size(60, 31);
             this.btnClose.TabIndex = 1;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -448,9 +468,10 @@ namespace DIVCRITv2
             this.panelDesktop.Controls.Add(this.pbxDivcrit);
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panelDesktop.Location = new System.Drawing.Point(253, 76);
+            this.panelDesktop.Location = new System.Drawing.Point(337, 94);
+            this.panelDesktop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(981, 685);
+            this.panelDesktop.Size = new System.Drawing.Size(1308, 843);
             this.panelDesktop.TabIndex = 2;
             // 
             // pbxDivcrit
@@ -459,21 +480,48 @@ namespace DIVCRITv2
             this.pbxDivcrit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pbxDivcrit.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbxDivcrit.Location = new System.Drawing.Point(0, 0);
+            this.pbxDivcrit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pbxDivcrit.Name = "pbxDivcrit";
-            this.pbxDivcrit.Size = new System.Drawing.Size(981, 685);
+            this.pbxDivcrit.Size = new System.Drawing.Size(1308, 843);
             this.pbxDivcrit.TabIndex = 0;
             this.pbxDivcrit.TabStop = false;
             // 
+            // btnGestionRH
+            // 
+            this.btnGestionRH.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnGestionRH.FlatAppearance.BorderSize = 0;
+            this.btnGestionRH.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGestionRH.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGestionRH.ForeColor = System.Drawing.Color.White;
+            this.btnGestionRH.IconChar = FontAwesome.Sharp.IconChar.IdCardAlt;
+            this.btnGestionRH.IconColor = System.Drawing.Color.White;
+            this.btnGestionRH.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnGestionRH.IconSize = 30;
+            this.btnGestionRH.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionRH.Location = new System.Drawing.Point(0, 493);
+            this.btnGestionRH.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGestionRH.Name = "btnGestionRH";
+            this.btnGestionRH.Padding = new System.Windows.Forms.Padding(13, 0, 0, 0);
+            this.btnGestionRH.Size = new System.Drawing.Size(337, 59);
+            this.btnGestionRH.TabIndex = 8;
+            this.btnGestionRH.Tag = "   GESTIÓN DE COLABORADORES";
+            this.btnGestionRH.Text = "   GESTIÓN DE COLABORADORES";
+            this.btnGestionRH.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGestionRH.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGestionRH.UseVisualStyleBackColor = true;
+            this.btnGestionRH.Click += new System.EventHandler(this.btnGestionRH_Click);
+            // 
             // frmMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1234, 761);
+            this.ClientSize = new System.Drawing.Size(1645, 937);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(1250, 800);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.MinimumSize = new System.Drawing.Size(1661, 976);
             this.Name = "frmMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -518,5 +566,6 @@ namespace DIVCRITv2
         private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pbxDivcrit;
+        private FontAwesome.Sharp.IconButton btnGestionRH;
     }
 }

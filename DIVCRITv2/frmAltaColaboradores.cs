@@ -39,6 +39,7 @@ namespace DIVCRITv2
         public void frmAltaColaboradores_Load(object sender, EventArgs e)
         {
             //CONSULTA PARA LLENAR EL COMBOBOX CON COLABORADORES
+            btnCancelarAct.Visible = false;
             cbxTipoUsuario.SelectedIndex = 0;
             cbxPuesto.SelectedIndex = 0;
             cbxArea.SelectedIndex = 0;
@@ -50,7 +51,9 @@ namespace DIVCRITv2
             while (sqlReader.Read())
             {
                 cbxNombreActualizar.Items.Add(sqlReader["nombre"].ToString());
+                cbxColaboradorExtra.Items.Add(sqlReader["nombre"].ToString());
             }
+
 
             conexion.Close();
 
@@ -157,7 +160,9 @@ namespace DIVCRITv2
             }
             conexion.Close();
 
-            btnAgregar.Enabled = false;
+            btnAgregar.Visible = false;
+            groupBox2.Text = "Modifica la Información que Deseas del Colaborador";
+            btnCancelarAct.Visible = true;
         }
 
         public void btnActualizar_Click(object sender, EventArgs e)
@@ -226,6 +231,9 @@ namespace DIVCRITv2
             limpiarCampos();
             tbxNomina.Enabled = true;
             VerificarDias();
+            btnCancelarAct.Visible = false;
+            btnAgregar.Visible = true;
+            groupBox2.Text = " Para Agregar un Colaborador Rellene los Campos";
         }
 
         public void VerificarDias()
@@ -442,7 +450,7 @@ namespace DIVCRITv2
             diasPedidosActualizado = diasPedidos - (int)nudDiasExtra.Value;
 
             //EJECUCION DEL UPDATE A LA TABLA DE VACACIONES
-            SqlCommand sqlCmd2 = new SqlCommand("UPDATE VACACIONES SET dias_pedidos = '" + diasPedidosActualizado + "' where nomina = " + tbxNomina.Text, conexion);
+            SqlCommand sqlCmd2 = new SqlCommand("UPDATE VACACIONES SET dias_pedidos = '" + diasPedidosActualizado + "' where nombre = " + cbxColaboradorExtra.Text, conexion);
             conexion.Open();
             try
             {
@@ -479,6 +487,8 @@ namespace DIVCRITv2
                     //OBTENER LA RUTA DEL ARCHIVO SELECCIONADO(RUTA DEÑ SERVIDOR)
                     direccionArchivo = "/Users/TEMP/Pictures/DIVCRIT/" + openFileDialog.SafeFileName;
                     direccionMostrarpbx = openFileDialog.FileName;
+                    //MessageBox.Show(direccionMostrarpbx);
+                    //direccionMostrarpbx = openFileDialog.InitialDirectory;
 
                     //LEER EL CONTENIDO DEL ARCHIVO
                     var fileStream = openFileDialog.OpenFile();
@@ -521,6 +531,9 @@ namespace DIVCRITv2
             limpiarCampos();
             tbxNomina.Enabled = true;
             VerificarDias();
+            btnCancelarAct.Visible = false;
+            btnAgregar.Visible = true;
+            groupBox2.Text = " Para Agregar un Colaborador Rellene los Campos";
         }
 
         public void cbxPuesto_SelectedIndexChanged(object sender, EventArgs e)
@@ -580,5 +593,12 @@ namespace DIVCRITv2
             nudDiasExtra.Value = 0;
         }
 
+        private void btnCancelarAct_Click(object sender, EventArgs e)
+        {
+            btnAgregar.Visible = true;
+            groupBox2.Text = " Para Agregar un Colaborador Rellene los Campos";
+            btnCancelarAct.Visible = false;
+            limpiarCampos();
+        }
     }
 }

@@ -238,7 +238,7 @@ namespace DIVCRITv2
                 //CollapseMenu();
             estadoBarMenu = false;
             iconCurrentChildForm.IconChar = btnAltaColab.IconChar;
-            lblTitleChildForm.Text = "ALTA DE COLABORADORES";
+            lblTitleChildForm.Text = "GESTIÓN DE COLABORADORES";
         }
 
         private void btnDirectorio_Click(object sender, EventArgs e)
@@ -264,30 +264,12 @@ namespace DIVCRITv2
 
         private void btnGestionPyV_Click(object sender, EventArgs e)
         {
-
-
-            //SI EL TIPO DE USUARIO ES VACACIONES, EL BOTON DE CHECKIN LOS LLEVARÁ AL FORMULARIO PARA ACTUALIZAR SUS DATOS
-            // DE PERMISOS VACACIONALES.
-            if (tipoUsuario == "vacaciones")
-            {
-                //AbrirFormulario<frmGestionSolicitud>();
-                if (estadoBarMenu)
-                //CollapseMenu();
-                estadoBarMenu = false;
-                iconCurrentChildForm.IconChar = btnGestionPyV.IconChar;
-                lblTitleChildForm.Text = "GESTIÓN DE PERMISOS Y VACACIONES";
-            }
-            else if (tipoUsuario == "admin")
-            {
-                //PARA LOS ADMINISTRADORES, ESTE BOTON LLEVA AL FORMULARIO PARA ACTUALIZAR TODOS LOS DATOS DEL USUARIO, ASÍ COMO
-                // AGREGAR NUEVOS O BORRAR EXISTENTES.
-                AbrirFormulario<frmGestionSolicitud>();
-                if (estadoBarMenu)
-                //CollapseMenu();
-                estadoBarMenu = false;
-                iconCurrentChildForm.IconChar = btnGestionPyV.IconChar;
-                lblTitleChildForm.Text = "GESTIÓN DE PERMISOS Y VACACIONES";
-            }
+            AbrirFormulario<frmGestionSolicitud>();
+            if (estadoBarMenu)
+            //CollapseMenu();
+            estadoBarMenu = false;
+            iconCurrentChildForm.IconChar = btnGestionPyV.IconChar;
+            lblTitleChildForm.Text = "GESTIÓN DE PERMISOS Y VACACIONES";
         }
 
         private void btnInventario_Click(object sender, EventArgs e)
@@ -384,6 +366,7 @@ namespace DIVCRITv2
                     btnGestionPyV.Visible = true;
                     btnInventario.Visible = true;
                     btnAltaColab.Visible = true;
+                    btnGestionRH.Visible = false;
                     break;
 
                 //JEFE SOLO VA A PODER ACCESAR A LAS SOLICITUDES VACACIONALES, POR LO QUE SE DESHABILITA CAUS Y CHECADOR
@@ -393,6 +376,7 @@ namespace DIVCRITv2
                     btnGestionPyV.Visible = true;
                     btnInventario.Visible = false;
                     btnAltaColab.Visible = false;
+                    btnGestionRH.Visible = false;
                     break;
 
                 //LOS USUARIOS CON EL DERECHO DE VACACIONES SON LOS QUE PUEDEN ACCESAR A LA ACTUALIZACIÓN DE PERMISOS VACACIONALES
@@ -403,6 +387,7 @@ namespace DIVCRITv2
                     btnGestionPyV.Visible = true;
                     btnInventario.Visible = false;
                     btnAltaColab.Visible = false;
+                    btnGestionRH.Visible = true;
                     break;
 
                 default:
@@ -412,8 +397,19 @@ namespace DIVCRITv2
                     btnGestionPyV.Visible = false;
                     btnInventario.Visible = false;
                     btnAltaColab.Visible = false;
+                    btnGestionRH.Visible = false;
                     break;
             }
+        }
+
+        private void btnGestionRH_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<frmGestionColaboradoresRH>();
+            if (estadoBarMenu)
+                //CollapseMenu();
+                estadoBarMenu = false;
+            iconCurrentChildForm.IconChar = btnGestionRH.IconChar;
+            lblTitleChildForm.Text = "GESTIÓN DE COLABORADORES";
         }
     }
 }

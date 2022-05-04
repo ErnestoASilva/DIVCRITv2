@@ -51,17 +51,18 @@ namespace DIVCRITv2
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(188, 301);
+            this.panel1.Size = new System.Drawing.Size(251, 370);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(3, 75);
+            this.pictureBox1.Location = new System.Drawing.Point(4, 92);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(182, 119);
+            this.pictureBox1.Size = new System.Drawing.Size(243, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -74,7 +75,7 @@ namespace DIVCRITv2
             this.shapeContainer1.Shapes.AddRange(new Microsoft.VisualBasic.PowerPacks.Shape[] {
             this.lineShape2,
             this.lineShape1});
-            this.shapeContainer1.Size = new System.Drawing.Size(585, 301);
+            this.shapeContainer1.Size = new System.Drawing.Size(780, 370);
             this.shapeContainer1.TabIndex = 1;
             this.shapeContainer1.TabStop = false;
             // 
@@ -105,10 +106,10 @@ namespace DIVCRITv2
             this.btnAcceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAcceder.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAcceder.ForeColor = System.Drawing.Color.LightGray;
-            this.btnAcceder.Location = new System.Drawing.Point(238, 188);
-            this.btnAcceder.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAcceder.Location = new System.Drawing.Point(317, 231);
+            this.btnAcceder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAcceder.Name = "btnAcceder";
-            this.btnAcceder.Size = new System.Drawing.Size(288, 32);
+            this.btnAcceder.Size = new System.Drawing.Size(384, 39);
             this.btnAcceder.TabIndex = 2;
             this.btnAcceder.Text = "ACCEDER";
             this.btnAcceder.UseVisualStyleBackColor = false;
@@ -120,11 +121,11 @@ namespace DIVCRITv2
             this.tbxUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxUsuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxUsuario.ForeColor = System.Drawing.Color.LightGray;
-            this.tbxUsuario.Location = new System.Drawing.Point(239, 109);
-            this.tbxUsuario.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxUsuario.Location = new System.Drawing.Point(319, 134);
+            this.tbxUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxUsuario.Name = "tbxUsuario";
-            this.tbxUsuario.Size = new System.Drawing.Size(283, 20);
-            this.tbxUsuario.TabIndex = 3;
+            this.tbxUsuario.Size = new System.Drawing.Size(377, 20);
+            this.tbxUsuario.TabIndex = 0;
             this.tbxUsuario.Text = "USUARIO";
             this.tbxUsuario.Click += new System.EventHandler(this.tbxUsuario_Click);
             this.tbxUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxUsuario_KeyDown);
@@ -134,8 +135,7 @@ namespace DIVCRITv2
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(336, 51);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(448, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 33);
             this.label1.TabIndex = 5;
@@ -152,11 +152,11 @@ namespace DIVCRITv2
             this.btnMinimize.IconColor = System.Drawing.Color.White;
             this.btnMinimize.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnMinimize.IconSize = 20;
-            this.btnMinimize.Location = new System.Drawing.Point(494, 0);
-            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimize.Location = new System.Drawing.Point(659, 0);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnMinimize.Name = "btnMinimize";
-            this.btnMinimize.Size = new System.Drawing.Size(45, 25);
-            this.btnMinimize.TabIndex = 8;
+            this.btnMinimize.Size = new System.Drawing.Size(60, 31);
+            this.btnMinimize.TabIndex = 3;
             this.btnMinimize.UseVisualStyleBackColor = false;
             this.btnMinimize.Click += new System.EventHandler(this.btnMinimize_Click);
             // 
@@ -170,11 +170,11 @@ namespace DIVCRITv2
             this.btnClose.IconColor = System.Drawing.Color.White;
             this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnClose.IconSize = 20;
-            this.btnClose.Location = new System.Drawing.Point(539, 0);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Location = new System.Drawing.Point(719, 0);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(45, 25);
-            this.btnClose.TabIndex = 6;
+            this.btnClose.Size = new System.Drawing.Size(60, 31);
+            this.btnClose.TabIndex = 4;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
@@ -184,21 +184,21 @@ namespace DIVCRITv2
             this.tbxPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.tbxPassword.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbxPassword.ForeColor = System.Drawing.Color.LightGray;
-            this.tbxPassword.Location = new System.Drawing.Point(238, 150);
-            this.tbxPassword.Margin = new System.Windows.Forms.Padding(2);
+            this.tbxPassword.Location = new System.Drawing.Point(317, 185);
+            this.tbxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(283, 20);
-            this.tbxPassword.TabIndex = 4;
+            this.tbxPassword.Size = new System.Drawing.Size(377, 20);
+            this.tbxPassword.TabIndex = 1;
             this.tbxPassword.Text = "CONTRASEÑA";
             this.tbxPassword.TextChanged += new System.EventHandler(this.tbxPassword_TextChanged);
             this.tbxPassword.Enter += new System.EventHandler(this.tbxPassword_Enter);
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(585, 301);
+            this.ClientSize = new System.Drawing.Size(780, 370);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label1);
@@ -209,10 +209,10 @@ namespace DIVCRITv2
             this.Controls.Add(this.shapeContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "1";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
