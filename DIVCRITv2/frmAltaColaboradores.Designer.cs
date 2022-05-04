@@ -35,16 +35,16 @@ namespace DIVCRITv2
             this.label10 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nudDiasExtra = new System.Windows.Forms.NumericUpDown();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxColaboradorExtra = new System.Windows.Forms.ComboBox();
             this.btnAgregarDias = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.gpbActualizar = new System.Windows.Forms.GroupBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.cbxNombreActualizar = new System.Windows.Forms.ComboBox();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pbxImagen = new System.Windows.Forms.PictureBox();
             this.lblAsteriscoContra = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@ namespace DIVCRITv2
             ((System.ComponentModel.ISupportInitialize)(this.nudDiasExtra)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.gpbActualizar.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiasVacacionesPedidos)).BeginInit();
@@ -102,7 +102,7 @@ namespace DIVCRITv2
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.nudDiasExtra);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cbxColaboradorExtra);
             this.groupBox1.Controls.Add(this.btnAgregarDias);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
@@ -147,16 +147,16 @@ namespace DIVCRITv2
             this.nudDiasExtra.Size = new System.Drawing.Size(142, 26);
             this.nudDiasExtra.TabIndex = 5;
             // 
-            // comboBox1
+            // cbxColaboradorExtra
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(0)))), ((int)(((byte)(44)))));
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(8, 57);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(604, 28);
-            this.comboBox1.TabIndex = 0;
+            this.cbxColaboradorExtra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(0)))), ((int)(((byte)(44)))));
+            this.cbxColaboradorExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxColaboradorExtra.ForeColor = System.Drawing.Color.White;
+            this.cbxColaboradorExtra.FormattingEnabled = true;
+            this.cbxColaboradorExtra.Location = new System.Drawing.Point(8, 57);
+            this.cbxColaboradorExtra.Name = "cbxColaboradorExtra";
+            this.cbxColaboradorExtra.Size = new System.Drawing.Size(604, 28);
+            this.cbxColaboradorExtra.TabIndex = 0;
             // 
             // btnAgregarDias
             // 
@@ -174,6 +174,7 @@ namespace DIVCRITv2
             this.btnAgregarDias.TabIndex = 4;
             this.btnAgregarDias.Text = "AGREGAR DIAS";
             this.btnAgregarDias.UseVisualStyleBackColor = false;
+            this.btnAgregarDias.Click += new System.EventHandler(this.btnAgregarDias_Click);
             // 
             // panel2
             // 
@@ -189,80 +190,83 @@ namespace DIVCRITv2
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(57)))), ((int)(((byte)(122)))));
-            this.panel3.Controls.Add(this.groupBox3);
+            this.panel3.Controls.Add(this.gpbActualizar);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 473);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(983, 108);
             this.panel3.TabIndex = 88;
             // 
-            // groupBox3
+            // gpbActualizar
             // 
-            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gpbActualizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox3.Controls.Add(this.button1);
-            this.groupBox3.Controls.Add(this.comboBox2);
-            this.groupBox3.Controls.Add(this.button3);
-            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.ForeColor = System.Drawing.Color.White;
-            this.groupBox3.Location = new System.Drawing.Point(11, 11);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(959, 87);
-            this.groupBox3.TabIndex = 6;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Seleccione Colaborador Para Eliminar o Actualizar";
+            this.gpbActualizar.Controls.Add(this.btnActualizar);
+            this.gpbActualizar.Controls.Add(this.cbxNombreActualizar);
+            this.gpbActualizar.Controls.Add(this.btnEliminar);
+            this.gpbActualizar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gpbActualizar.ForeColor = System.Drawing.Color.White;
+            this.gpbActualizar.Location = new System.Drawing.Point(11, 11);
+            this.gpbActualizar.Name = "gpbActualizar";
+            this.gpbActualizar.Size = new System.Drawing.Size(959, 87);
+            this.gpbActualizar.TabIndex = 6;
+            this.gpbActualizar.TabStop = false;
+            this.gpbActualizar.Text = "Seleccione Colaborador Para Eliminar o Actualizar";
             // 
-            // button1
+            // btnActualizar
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.LightGray;
-            this.button1.Location = new System.Drawing.Point(637, 32);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(142, 40);
-            this.button1.TabIndex = 3;
-            this.button1.Text = "ACTUALIZAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnActualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnActualizar.Location = new System.Drawing.Point(637, 32);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(142, 40);
+            this.btnActualizar.TabIndex = 3;
+            this.btnActualizar.Text = "ACTUALIZAR";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
-            // comboBox2
+            // cbxNombreActualizar
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(57)))), ((int)(((byte)(122)))));
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.ForeColor = System.Drawing.Color.White;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(9, 40);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(604, 28);
-            this.comboBox2.TabIndex = 0;
+            this.cbxNombreActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(57)))), ((int)(((byte)(122)))));
+            this.cbxNombreActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cbxNombreActualizar.ForeColor = System.Drawing.Color.White;
+            this.cbxNombreActualizar.FormattingEnabled = true;
+            this.cbxNombreActualizar.Location = new System.Drawing.Point(9, 40);
+            this.cbxNombreActualizar.Name = "cbxNombreActualizar";
+            this.cbxNombreActualizar.Size = new System.Drawing.Size(604, 28);
+            this.cbxNombreActualizar.TabIndex = 0;
+            this.cbxNombreActualizar.SelectedIndexChanged += new System.EventHandler(this.cbxNombreActualizar_SelectedIndexChanged);
             // 
-            // button3
+            // btnEliminar
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.LightGray;
-            this.button3.Location = new System.Drawing.Point(802, 32);
-            this.button3.Margin = new System.Windows.Forms.Padding(2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(142, 40);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "ELIMINAR";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnEliminar.Location = new System.Drawing.Point(802, 32);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(142, 40);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnAgregar);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.pbxImagen);
             this.groupBox2.Controls.Add(this.lblAsteriscoContra);
@@ -301,22 +305,23 @@ namespace DIVCRITv2
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Para Agregar un Colaborador Rellene los Campos";
             // 
-            // button2
+            // btnAgregar
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.LightGray;
-            this.button2.Location = new System.Drawing.Point(728, 367);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(211, 57);
-            this.button2.TabIndex = 87;
-            this.button2.Text = "AGREGAR COLABORADOR";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.LightGray;
+            this.btnAgregar.Location = new System.Drawing.Point(728, 367);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(211, 57);
+            this.btnAgregar.TabIndex = 87;
+            this.btnAgregar.Text = "AGREGAR COLABORADOR";
+            this.btnAgregar.UseVisualStyleBackColor = false;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // label1
             // 
@@ -411,6 +416,7 @@ namespace DIVCRITv2
             this.cbxArea.Size = new System.Drawing.Size(303, 28);
             this.cbxArea.Sorted = true;
             this.cbxArea.TabIndex = 79;
+            this.cbxArea.SelectedIndexChanged += new System.EventHandler(this.cbxArea_SelectedIndexChanged);
             // 
             // cbxPuesto
             // 
@@ -440,6 +446,7 @@ namespace DIVCRITv2
             this.cbxPuesto.Size = new System.Drawing.Size(303, 28);
             this.cbxPuesto.Sorted = true;
             this.cbxPuesto.TabIndex = 78;
+            this.cbxPuesto.SelectedIndexChanged += new System.EventHandler(this.cbxPuesto_SelectedIndexChanged);
             // 
             // tbxOficina
             // 
@@ -452,6 +459,7 @@ namespace DIVCRITv2
             this.tbxOficina.Name = "tbxOficina";
             this.tbxOficina.Size = new System.Drawing.Size(304, 26);
             this.tbxOficina.TabIndex = 66;
+            this.tbxOficina.TextChanged += new System.EventHandler(this.tbxOficina_TextChanged);
             // 
             // tbxExtension
             // 
@@ -464,6 +472,7 @@ namespace DIVCRITv2
             this.tbxExtension.Name = "tbxExtension";
             this.tbxExtension.Size = new System.Drawing.Size(304, 26);
             this.tbxExtension.TabIndex = 65;
+            this.tbxExtension.TextChanged += new System.EventHandler(this.tbxExtension_TextChanged);
             // 
             // btnOficina
             // 
@@ -524,6 +533,7 @@ namespace DIVCRITv2
             this.cbxTipoUsuario.Size = new System.Drawing.Size(304, 28);
             this.cbxTipoUsuario.Sorted = true;
             this.cbxTipoUsuario.TabIndex = 60;
+            this.cbxTipoUsuario.SelectedIndexChanged += new System.EventHandler(this.cbxTipoUsuario_SelectedIndexChanged);
             // 
             // tbxCorreoJefe
             // 
@@ -536,6 +546,7 @@ namespace DIVCRITv2
             this.tbxCorreoJefe.Name = "tbxCorreoJefe";
             this.tbxCorreoJefe.Size = new System.Drawing.Size(304, 26);
             this.tbxCorreoJefe.TabIndex = 64;
+            this.tbxCorreoJefe.TextChanged += new System.EventHandler(this.tbxCorreoJefe_TextChanged);
             // 
             // tbxContraseña
             // 
@@ -548,6 +559,7 @@ namespace DIVCRITv2
             this.tbxContraseña.Name = "tbxContraseña";
             this.tbxContraseña.Size = new System.Drawing.Size(304, 26);
             this.tbxContraseña.TabIndex = 59;
+            this.tbxContraseña.TextChanged += new System.EventHandler(this.tbxContraseña_TextChanged);
             // 
             // tbxCorreo
             // 
@@ -560,6 +572,7 @@ namespace DIVCRITv2
             this.tbxCorreo.Name = "tbxCorreo";
             this.tbxCorreo.Size = new System.Drawing.Size(304, 26);
             this.tbxCorreo.TabIndex = 58;
+            this.tbxCorreo.TextChanged += new System.EventHandler(this.tbxCorreo_TextChanged);
             // 
             // tbxNombre
             // 
@@ -572,6 +585,7 @@ namespace DIVCRITv2
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(304, 26);
             this.tbxNombre.TabIndex = 57;
+            this.tbxNombre.TextChanged += new System.EventHandler(this.tbxNombre_TextChanged);
             // 
             // tbxNomina
             // 
@@ -584,6 +598,8 @@ namespace DIVCRITv2
             this.tbxNomina.Name = "tbxNomina";
             this.tbxNomina.Size = new System.Drawing.Size(304, 26);
             this.tbxNomina.TabIndex = 56;
+            this.tbxNomina.TextChanged += new System.EventHandler(this.tbxNomina_TextChanged);
+            this.tbxNomina.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxNomina_KeyPress);
             // 
             // label14
             // 
@@ -725,13 +741,15 @@ namespace DIVCRITv2
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "frmAltaColaboradores";
             this.Text = "frmAltaColaboradores";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmAltarColaboradores_FormClosed);
+            this.Load += new System.EventHandler(this.frmAltaColaboradores_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDiasExtra)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.groupBox3.ResumeLayout(false);
+            this.gpbActualizar.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagen)).EndInit();
@@ -745,10 +763,10 @@ namespace DIVCRITv2
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxColaboradorExtra;
         private System.Windows.Forms.Button btnAgregarDias;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pbxImagen;
         private System.Windows.Forms.Label lblAsteriscoContra;
@@ -781,10 +799,10 @@ namespace DIVCRITv2
         private System.Windows.Forms.Label label0;
         private System.Windows.Forms.NumericUpDown nudDiasExtra;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.GroupBox gpbActualizar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.ComboBox cbxNombreActualizar;
+        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label2;
         //private System.Windows.Forms.Label label3;

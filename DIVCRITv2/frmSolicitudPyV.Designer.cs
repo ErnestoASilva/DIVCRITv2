@@ -29,9 +29,10 @@ namespace DIVCRITv2
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSolicitudPyV));
             this.label13 = new System.Windows.Forms.Label();
-            this.lblDiasCalculados = new System.Windows.Forms.Label();
+            this.lblDiasCalcualdos = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.dtpFecha2CG = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
@@ -51,8 +52,9 @@ namespace DIVCRITv2
             this.label3 = new System.Windows.Forms.Label();
             this.rbtTitulacion = new System.Windows.Forms.RadioButton();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
             this.lblPermiso_Horas = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbxFoto = new System.Windows.Forms.PictureBox();
             this.labelDias = new System.Windows.Forms.Label();
             this.lblPermiso_SinGoce = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
@@ -96,9 +98,10 @@ namespace DIVCRITv2
             this.label14 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabVacaciones.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).BeginInit();
             this.tbpSolicitud.SuspendLayout();
             this.tabConGoce.SuspendLayout();
             this.tabSinGoce.SuspendLayout();
@@ -117,18 +120,18 @@ namespace DIVCRITv2
             this.label13.TabIndex = 30;
             this.label13.Text = "MOTIVO:";
             // 
-            // lblDiasCalculados
+            // lblDiasCalcualdos
             // 
-            this.lblDiasCalculados.AutoSize = true;
-            this.lblDiasCalculados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.lblDiasCalculados.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDiasCalculados.ForeColor = System.Drawing.Color.LightGray;
-            this.lblDiasCalculados.Location = new System.Drawing.Point(5, 189);
-            this.lblDiasCalculados.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblDiasCalculados.Name = "lblDiasCalculados";
-            this.lblDiasCalculados.Size = new System.Drawing.Size(53, 21);
-            this.lblDiasCalculados.TabIndex = 24;
-            this.lblDiasCalculados.Text = "[dias]";
+            this.lblDiasCalcualdos.AutoSize = true;
+            this.lblDiasCalcualdos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.lblDiasCalcualdos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDiasCalcualdos.ForeColor = System.Drawing.Color.LightGray;
+            this.lblDiasCalcualdos.Location = new System.Drawing.Point(5, 189);
+            this.lblDiasCalcualdos.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblDiasCalcualdos.Name = "lblDiasCalcualdos";
+            this.lblDiasCalcualdos.Size = new System.Drawing.Size(53, 21);
+            this.lblDiasCalcualdos.TabIndex = 24;
+            this.lblDiasCalcualdos.Text = "[dias]";
             // 
             // label9
             // 
@@ -149,6 +152,7 @@ namespace DIVCRITv2
             this.dtpFecha2CG.Name = "dtpFecha2CG";
             this.dtpFecha2CG.Size = new System.Drawing.Size(346, 27);
             this.dtpFecha2CG.TabIndex = 22;
+            this.dtpFecha2CG.ValueChanged += new System.EventHandler(this.dtpFecha2CG_ValueChanged);
             // 
             // label8
             // 
@@ -197,6 +201,7 @@ namespace DIVCRITv2
             this.btnSolicitarVacaciones.TabIndex = 39;
             this.btnSolicitarVacaciones.Text = "SOLICITAR";
             this.btnSolicitarVacaciones.UseVisualStyleBackColor = false;
+            this.btnSolicitarVacaciones.Click += new System.EventHandler(this.btnSolicitarVacaciones_Click);
             // 
             // lblDiasCalculadosVacaciones
             // 
@@ -229,6 +234,7 @@ namespace DIVCRITv2
             this.dtpFecha2Vacaciones.Name = "dtpFecha2Vacaciones";
             this.dtpFecha2Vacaciones.Size = new System.Drawing.Size(348, 27);
             this.dtpFecha2Vacaciones.TabIndex = 30;
+            this.dtpFecha2Vacaciones.ValueChanged += new System.EventHandler(this.dtpFecha2Vacaciones_ValueChanged);
             // 
             // label18
             // 
@@ -248,6 +254,7 @@ namespace DIVCRITv2
             this.dtpFecha1Vacaciones.Name = "dtpFecha1Vacaciones";
             this.dtpFecha1Vacaciones.Size = new System.Drawing.Size(347, 27);
             this.dtpFecha1Vacaciones.TabIndex = 28;
+            this.dtpFecha1Vacaciones.ValueChanged += new System.EventHandler(this.dtpFecha1Vacaciones_ValueChanged);
             // 
             // label17
             // 
@@ -293,17 +300,18 @@ namespace DIVCRITv2
             this.dtpFecha1CG.Name = "dtpFecha1CG";
             this.dtpFecha1CG.Size = new System.Drawing.Size(346, 27);
             this.dtpFecha1CG.TabIndex = 20;
+            this.dtpFecha1CG.ValueChanged += new System.EventHandler(this.dtpFecha1CG_ValueChanged);
             // 
             // lblArea
             // 
             this.lblArea.AutoSize = true;
             this.lblArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
-            this.lblArea.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArea.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArea.ForeColor = System.Drawing.Color.LightGray;
-            this.lblArea.Location = new System.Drawing.Point(148, 109);
+            this.lblArea.Location = new System.Drawing.Point(148, 107);
             this.lblArea.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(70, 22);
+            this.lblArea.Size = new System.Drawing.Size(61, 21);
             this.lblArea.TabIndex = 9;
             this.lblArea.Text = "[Area]";
             // 
@@ -330,7 +338,6 @@ namespace DIVCRITv2
             this.label3.Size = new System.Drawing.Size(265, 22);
             this.label3.TabIndex = 17;
             this.label3.Text = "Permisos de Horas Restantes";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // rbtTitulacion
             // 
@@ -348,10 +355,11 @@ namespace DIVCRITv2
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
+            this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.lblArea);
             this.panel1.Controls.Add(this.lblPermiso_Horas);
-            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pbxFoto);
             this.panel1.Controls.Add(this.labelDias);
             this.panel1.Controls.Add(this.lblPermiso_SinGoce);
             this.panel1.Controls.Add(this.lblNombre);
@@ -367,7 +375,17 @@ namespace DIVCRITv2
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(454, 561);
             this.panel1.TabIndex = 23;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.lblTime.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.LightGray;
+            this.lblTime.Location = new System.Drawing.Point(4, 531);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(71, 21);
+            this.lblTime.TabIndex = 19;
+            this.lblTime.Text = "[Fecha]";
             // 
             // lblPermiso_Horas
             // 
@@ -382,16 +400,17 @@ namespace DIVCRITv2
             this.lblPermiso_Horas.TabIndex = 18;
             this.lblPermiso_Horas.Text = "[permisos]";
             // 
-            // pictureBox1
+            // pbxFoto
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(8, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(135, 139);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pbxFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
+            this.pbxFoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxFoto.BackgroundImage")));
+            this.pbxFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxFoto.Location = new System.Drawing.Point(8, 14);
+            this.pbxFoto.Name = "pbxFoto";
+            this.pbxFoto.Size = new System.Drawing.Size(135, 139);
+            this.pbxFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbxFoto.TabIndex = 0;
+            this.pbxFoto.TabStop = false;
             // 
             // labelDias
             // 
@@ -418,18 +437,17 @@ namespace DIVCRITv2
             this.lblPermiso_SinGoce.Size = new System.Drawing.Size(88, 21);
             this.lblPermiso_SinGoce.TabIndex = 16;
             this.lblPermiso_SinGoce.Text = "[permisos]";
-            this.lblPermiso_SinGoce.Click += new System.EventHandler(this.lblPermiso_SinGoce_Click);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.LightGray;
             this.lblNombre.Location = new System.Drawing.Point(146, 20);
             this.lblNombre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(143, 33);
+            this.lblNombre.Size = new System.Drawing.Size(109, 24);
             this.lblNombre.TabIndex = 6;
             this.lblNombre.Text = "[Nombre]";
             // 
@@ -445,18 +463,17 @@ namespace DIVCRITv2
             this.label2.Size = new System.Drawing.Size(432, 22);
             this.label2.TabIndex = 15;
             this.label2.Text = "Permisos de Días sin Goce de Sueldo Restantes";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // lblNomina
             // 
             this.lblNomina.AutoSize = true;
             this.lblNomina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
-            this.lblNomina.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomina.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomina.ForeColor = System.Drawing.Color.LightGray;
-            this.lblNomina.Location = new System.Drawing.Point(146, 65);
+            this.lblNomina.Location = new System.Drawing.Point(148, 58);
             this.lblNomina.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomina.Name = "lblNomina";
-            this.lblNomina.Size = new System.Drawing.Size(95, 22);
+            this.lblNomina.Size = new System.Drawing.Size(83, 21);
             this.lblNomina.TabIndex = 7;
             this.lblNomina.Text = "[Nomina]";
             // 
@@ -477,12 +494,12 @@ namespace DIVCRITv2
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
-            this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.LightGray;
-            this.lblCorreo.Location = new System.Drawing.Point(146, 87);
+            this.lblCorreo.Location = new System.Drawing.Point(148, 83);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(87, 22);
+            this.lblCorreo.Size = new System.Drawing.Size(75, 21);
             this.lblCorreo.TabIndex = 8;
             this.lblCorreo.Text = "[Correo]";
             // 
@@ -503,12 +520,12 @@ namespace DIVCRITv2
             // 
             this.lblPuesto.AutoSize = true;
             this.lblPuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
-            this.lblPuesto.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPuesto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuesto.ForeColor = System.Drawing.Color.LightGray;
-            this.lblPuesto.Location = new System.Drawing.Point(146, 131);
+            this.lblPuesto.Location = new System.Drawing.Point(148, 131);
             this.lblPuesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(85, 22);
+            this.lblPuesto.Size = new System.Drawing.Size(74, 21);
             this.lblPuesto.TabIndex = 10;
             this.lblPuesto.Text = "[Puesto]";
             // 
@@ -555,7 +572,7 @@ namespace DIVCRITv2
             this.tabConGoce.Controls.Add(this.rbtCursos);
             this.tabConGoce.Controls.Add(this.rbtTitulacion);
             this.tabConGoce.Controls.Add(this.rbtEnfermedad);
-            this.tabConGoce.Controls.Add(this.lblDiasCalculados);
+            this.tabConGoce.Controls.Add(this.lblDiasCalcualdos);
             this.tabConGoce.Controls.Add(this.label9);
             this.tabConGoce.Controls.Add(this.dtpFecha2CG);
             this.tabConGoce.Controls.Add(this.label8);
@@ -586,6 +603,7 @@ namespace DIVCRITv2
             this.btnSolicitarCG.TabIndex = 36;
             this.btnSolicitarCG.Text = "SOLICITAR";
             this.btnSolicitarCG.UseVisualStyleBackColor = false;
+            this.btnSolicitarCG.Click += new System.EventHandler(this.btnSolicitarCG_Click);
             // 
             // tbxOtro
             // 
@@ -593,6 +611,7 @@ namespace DIVCRITv2
             this.tbxOtro.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxOtro.Enabled = false;
             this.tbxOtro.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbxOtro.ForeColor = System.Drawing.Color.LightGray;
             this.tbxOtro.Location = new System.Drawing.Point(92, 404);
             this.tbxOtro.Name = "tbxOtro";
             this.tbxOtro.Size = new System.Drawing.Size(323, 23);
@@ -622,6 +641,7 @@ namespace DIVCRITv2
             this.rbtOtro.TabStop = true;
             this.rbtOtro.Text = "OTRO:";
             this.rbtOtro.UseVisualStyleBackColor = true;
+            this.rbtOtro.CheckedChanged += new System.EventHandler(this.rbtOtro_CheckedChanged);
             // 
             // rbtFallecimiento
             // 
@@ -635,6 +655,7 @@ namespace DIVCRITv2
             this.rbtFallecimiento.TabStop = true;
             this.rbtFallecimiento.Text = "FALLECIMIENTO:";
             this.rbtFallecimiento.UseVisualStyleBackColor = true;
+            this.rbtFallecimiento.CheckedChanged += new System.EventHandler(this.rbtFallecimiento_CheckedChanged);
             // 
             // rbtNacimiento
             // 
@@ -753,6 +774,7 @@ namespace DIVCRITv2
             this.btnSolicitarSG.TabIndex = 37;
             this.btnSolicitarSG.Text = "SOLICITAR";
             this.btnSolicitarSG.UseVisualStyleBackColor = false;
+            this.btnSolicitarSG.Click += new System.EventHandler(this.btnSolicitarSG_Click);
             // 
             // rtbxSinGoce
             // 
@@ -794,6 +816,7 @@ namespace DIVCRITv2
             this.dtpFecha2SG.Name = "dtpFecha2SG";
             this.dtpFecha2SG.Size = new System.Drawing.Size(328, 27);
             this.dtpFecha2SG.TabIndex = 26;
+            this.dtpFecha2SG.ValueChanged += new System.EventHandler(this.dtpFecha2SG_ValueChanged);
             // 
             // label10
             // 
@@ -814,6 +837,7 @@ namespace DIVCRITv2
             this.dtpFecha1SG.Name = "dtpFecha1SG";
             this.dtpFecha1SG.Size = new System.Drawing.Size(328, 27);
             this.dtpFecha1SG.TabIndex = 24;
+            this.dtpFecha1SG.ValueChanged += new System.EventHandler(this.dtpFecha1SG_ValueChanged);
             // 
             // label11
             // 
@@ -876,6 +900,7 @@ namespace DIVCRITv2
             this.btnSolicitarHoras.TabIndex = 38;
             this.btnSolicitarHoras.Text = "SOLICITAR";
             this.btnSolicitarHoras.UseVisualStyleBackColor = false;
+            this.btnSolicitarHoras.Click += new System.EventHandler(this.btnSolicitarHoras_Click);
             // 
             // rtbxMotivoHora
             // 
@@ -904,6 +929,7 @@ namespace DIVCRITv2
             this.dtpHora2.Size = new System.Drawing.Size(321, 27);
             this.dtpHora2.TabIndex = 33;
             this.dtpHora2.Value = new System.DateTime(2021, 9, 20, 0, 0, 0, 0);
+            this.dtpHora2.ValueChanged += new System.EventHandler(this.dtpHora2_ValueChanged);
             // 
             // dtpHora
             // 
@@ -912,6 +938,7 @@ namespace DIVCRITv2
             this.dtpHora.Size = new System.Drawing.Size(321, 27);
             this.dtpHora.TabIndex = 32;
             this.dtpHora.Value = new System.DateTime(2021, 9, 20, 0, 0, 0, 0);
+            this.dtpHora.ValueChanged += new System.EventHandler(this.dtpHora_ValueChanged);
             // 
             // label15
             // 
@@ -962,6 +989,10 @@ namespace DIVCRITv2
             this.label5.TabIndex = 8;
             this.label5.Text = "PERMISO DE AUSENCIA POR HORAS";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // frmSolicitudPyV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -971,11 +1002,13 @@ namespace DIVCRITv2
             this.Controls.Add(this.tbpSolicitud);
             this.Name = "frmSolicitudPyV";
             this.Text = "frmSolicitudPyV";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmSolicitudPyV_FormClosed);
+            this.Load += new System.EventHandler(this.frmSolicitudPyV_Load);
             this.tabVacaciones.ResumeLayout(false);
             this.tabVacaciones.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFoto)).EndInit();
             this.tbpSolicitud.ResumeLayout(false);
             this.tabConGoce.ResumeLayout(false);
             this.tabConGoce.PerformLayout();
@@ -990,7 +1023,7 @@ namespace DIVCRITv2
         #endregion
 
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label lblDiasCalculados;
+        private System.Windows.Forms.Label lblDiasCalcualdos;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker dtpFecha2CG;
         private System.Windows.Forms.Label label8;
@@ -1011,7 +1044,7 @@ namespace DIVCRITv2
         private System.Windows.Forms.RadioButton rbtTitulacion;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lblPermiso_Horas;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbxFoto;
         private System.Windows.Forms.Label labelDias;
         private System.Windows.Forms.Label lblPermiso_SinGoce;
         private System.Windows.Forms.Label lblNombre;
@@ -1055,5 +1088,7 @@ namespace DIVCRITv2
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

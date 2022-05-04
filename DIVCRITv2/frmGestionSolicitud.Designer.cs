@@ -33,9 +33,6 @@ namespace DIVCRITv2
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSolicitudes = new System.Windows.Forms.DataGridView();
-            this.idSol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreSol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaSol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbxEstadoLista = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gbxSolicitud = new System.Windows.Forms.GroupBox();
@@ -62,7 +59,7 @@ namespace DIVCRITv2
             this.dgvSolicitudes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvSolicitudes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvSolicitudes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvSolicitudes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(86)))), ((int)(((byte)(91)))), ((int)(((byte)(101)))));
             this.dgvSolicitudes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSolicitudes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
@@ -76,10 +73,6 @@ namespace DIVCRITv2
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvSolicitudes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSolicitudes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSolicitudes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idSol,
-            this.nombreSol,
-            this.fechaSol});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -106,21 +99,8 @@ namespace DIVCRITv2
             this.dgvSolicitudes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSolicitudes.Size = new System.Drawing.Size(349, 544);
             this.dgvSolicitudes.TabIndex = 8;
-            // 
-            // idSol
-            // 
-            this.idSol.HeaderText = "ID";
-            this.idSol.Name = "idSol";
-            // 
-            // nombreSol
-            // 
-            this.nombreSol.HeaderText = "Tipo";
-            this.nombreSol.Name = "nombreSol";
-            // 
-            // fechaSol
-            // 
-            this.fechaSol.HeaderText = "Fecha";
-            this.fechaSol.Name = "fechaSol";
+            this.dgvSolicitudes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSolicitudes_CellClick);
+            this.dgvSolicitudes.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSolicitudes_RowEnter);
             // 
             // cbxEstadoLista
             // 
@@ -136,6 +116,7 @@ namespace DIVCRITv2
             this.cbxEstadoLista.Name = "cbxEstadoLista";
             this.cbxEstadoLista.Size = new System.Drawing.Size(199, 28);
             this.cbxEstadoLista.TabIndex = 10;
+            this.cbxEstadoLista.SelectedIndexChanged += new System.EventHandler(this.cbxEstadoLista_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -182,13 +163,14 @@ namespace DIVCRITv2
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAceptar.ForeColor = System.Drawing.Color.LightGray;
             this.btnAceptar.Location = new System.Drawing.Point(223, 522);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(126, 38);
             this.btnAceptar.TabIndex = 2;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnDenegar
             // 
@@ -197,13 +179,14 @@ namespace DIVCRITv2
             this.btnDenegar.FlatAppearance.BorderSize = 0;
             this.btnDenegar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDenegar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDenegar.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnDenegar.ForeColor = System.Drawing.Color.LightGray;
             this.btnDenegar.Location = new System.Drawing.Point(80, 522);
             this.btnDenegar.Name = "btnDenegar";
             this.btnDenegar.Size = new System.Drawing.Size(126, 38);
             this.btnDenegar.TabIndex = 2;
             this.btnDenegar.Text = "Rechazar";
             this.btnDenegar.UseVisualStyleBackColor = false;
+            this.btnDenegar.Click += new System.EventHandler(this.btnDenegar_Click);
             // 
             // rtbMotivo
             // 
@@ -331,6 +314,8 @@ namespace DIVCRITv2
             this.Controls.Add(this.gbxSolicitud);
             this.Name = "frmGestionSolicitud";
             this.Text = "frmGestionSolicitud";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmGestionSolicitu_FormClosed);
+            this.Load += new System.EventHandler(this.frmGestionSolicitud_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSolicitudes)).EndInit();
             this.gbxSolicitud.ResumeLayout(false);
             this.gbxSolicitud.PerformLayout();
@@ -342,9 +327,6 @@ namespace DIVCRITv2
         #endregion
 
         private System.Windows.Forms.DataGridView dgvSolicitudes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idSol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombreSol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechaSol;
         private System.Windows.Forms.ComboBox cbxEstadoLista;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox gbxSolicitud;

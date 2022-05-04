@@ -122,7 +122,9 @@
 donde se deberán asignar todos los datos relacionados al nuevo colaborador, incluyendo:
 nombre, edad, género, fecha de ingreso, permisos de usuario, área laboral, etc. Tambien
 en esta sección se pueden modificar y eliminar a los usuarios que ya han sido dados de alta en el sistema.
-(NOTA: solo los usuarios con permisos de administrador puedes gestionar esta sección).</value>
+(NOTA: solo los usuarios con permisos de administrador puedes gestionar esta sección).
+.
+</value>
   </data>
   <data name="label15.Text" xml:space="preserve">
     <value>Para dar de alta un articulo nuevo se deberá ingresar a la sección de Inventario
