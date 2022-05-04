@@ -35,6 +35,7 @@ namespace DIVCRITv2
         public string direccionArchivo = string.Empty; /*!< Se especifica la ruta de acceso para acceder a las fotos que se les asignaran a los colaboradores */
         public string direccionMostrarpbx = string.Empty; /*!< Es la direccion de las fotos en el servidor donde estan alojadas. */
         public string tipoUsuario; /*!< Es el tipo de usuario registrado con el colaborador. */
+        public string nominaExtra;
 
         public void frmAltaColaboradores_Load(object sender, EventArgs e)
         {
@@ -57,18 +58,25 @@ namespace DIVCRITv2
 
             conexion.Close();
 
+            if (cbxColaboradorExtra.Text == "")
+            {
+                btnAgregarDias.Enabled = false;
+            }
+            else
+            {
+                btnAgregarDias.Enabled = true;
+            }
+
             //PREGUNTA SI NO HAY NINGUN USUARIO SELECCIONADO PARA HABILITAR O DESHABILITAR LOS BOTONES
             if (cbxNombreActualizar.Text == "")
             {
                 btnActualizar.Enabled = false;
                 btnEliminar.Enabled = false;
-                btnAgregarDias.Enabled = false;
             }
             else
             {
                 btnActualizar.Enabled = true;
                 btnEliminar.Enabled = true;
-                btnAgregarDias.Enabled = true;
             }
 
             //LLAMADA AL METODO PARA ACTIVAR O DESACTIVAR EL BOTON AGREGAR
@@ -239,12 +247,15 @@ namespace DIVCRITv2
         public void VerificarDias()
         {
             if (cbxNombreActualizar.Text == "")
-
-                gpbActualizar.Enabled = false;
-
+            {
+                btnActualizar.Enabled = false;
+                btnEliminar.Enabled = false;
+            }
             else
-
-                gpbActualizar.Enabled = true;
+            {
+                btnActualizar.Enabled = true;
+                btnEliminar.Enabled = true;
+            }
         }
 
         public void btnAgregar_Click(object sender, EventArgs e)
@@ -374,7 +385,15 @@ namespace DIVCRITv2
        */
         public void tbxNombre_TextChanged(object sender, EventArgs e)
         {
-
+            VerificarAgregar();
+            if (tbxNombre.Text == "")
+            {
+                lblAsteriscoNombre.Visible = true;
+            }
+            else
+            {
+                lblAsteriscoNombre.Visible = false;
+            }
         }
 
         public void cbxArea_TextChanged(object sender, EventArgs e)
@@ -450,7 +469,7 @@ namespace DIVCRITv2
             diasPedidosActualizado = diasPedidos - (int)nudDiasExtra.Value;
 
             //EJECUCION DEL UPDATE A LA TABLA DE VACACIONES
-            SqlCommand sqlCmd2 = new SqlCommand("UPDATE VACACIONES SET dias_pedidos = '" + diasPedidosActualizado + "' where nombre = " + cbxColaboradorExtra.Text, conexion);
+            SqlCommand sqlCmd2 = new SqlCommand("UPDATE VACACIONES SET dias_pedidos = '" + diasPedidosActualizado + "' where nomina = '" + nominaExtra + "'", conexion);
             conexion.Open();
             try
             {
@@ -459,8 +478,8 @@ namespace DIVCRITv2
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Ocurrio un error inesperado.", "Aviso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                //MessageBox.Show("Ocurrio un error inesperado.", "Aviso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                throw;
             }
             conexion.Close();
 
@@ -599,6 +618,39 @@ namespace DIVCRITv2
             groupBox2.Text = " Para Agregar un Colaborador Rellene los Campos";
             btnCancelarAct.Visible = false;
             limpiarCampos();
+        }
+
+        private void cbxColaboradorExtra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxColaboradorExtra.Text == "")
+            {
+                btnAgregarDias.Enabled = false;
+            }
+            else
+            {
+                btnAgregarDias.Enabled = true;
+            }
+
+            conexion.Open();
+            string consulta = string.Format("SELECT C.nomina, V.dias_pedidos FROM COLABORADORES C INNER JOIN VACACIONES V ON C.nomina = V.nomina WHERE nombre = " + "'"
+                + cbxColaboradorExtra.Text.Trim() + "';");
+            SqlCommand command = new SqlCommand(consulta, conexion);
+            SqlDataReader reader = command.ExecuteReader();
+
+            try
+            {
+                while (reader.Read())
+                {
+                    nominaExtra = reader["nomina"].ToString();
+                    diasPedidos = (int)reader["dias_pedidos"];
+
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+            conexion.Close();
         }
     }
 }

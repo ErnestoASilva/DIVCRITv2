@@ -227,6 +227,14 @@ namespace DIVCRITv2
             //si el formulario/instancia existe
             else
             {
+                formulario.Dispose();
+                formulario = new MiForm();
+                formulario.TopLevel = false;
+                formulario.FormBorderStyle = FormBorderStyle.None;
+                formulario.Dock = DockStyle.Fill;
+                panelDesktop.Controls.Add(formulario);
+                panelDesktop.Tag = formulario;
+                formulario.Show();
                 formulario.BringToFront();
             }
         }

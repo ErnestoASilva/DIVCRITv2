@@ -276,15 +276,33 @@ namespace DIVCRITv2
             if (tbxNoOficina.Text == "" || cbxArea.Text == "" || cbxColaborador.Text == "" || cbxTipo.Text == "" || tbxNoSerie.Text == ""
              || tbxNombre.Text == "" || tbxMarca.Text == "")
             {
+                
                 btnAgregar.Enabled = false;
                 btnActualizar.Enabled = false;
                 btnEliminar.Enabled = false;
             }
             else
             {
-                btnAgregar.Enabled = true;
-                btnActualizar.Enabled = true;
-                btnEliminar.Enabled = true;
+               /**
+                * VERIFICAR SI EL NUMERO DE SERIE INTRODUCIDO EN EL CAMPO DE NUMSERIE YA EXISTE EN LA TABLA 
+                */
+                for (int i = 0; i < dgvInventario.Rows.Count; i++)
+                {
+                    if (dgvInventario.Rows[i].Cells[5].Value.ToString() == tbxNoSerie.Text.Trim())
+                    {
+                        btnAgregar.Enabled = false;
+                        //btnActualizar.Enabled = true;
+                        //btnEliminar.Enabled = true;
+                        break;
+                    }
+                    else
+                    {
+                        btnAgregar.Enabled = true;
+                        //btnActualizar.Enabled = true;
+                        //btnEliminar.Enabled = true;
+                    }
+                }
+                
             }
         }
 
@@ -389,6 +407,17 @@ namespace DIVCRITv2
             }
         }
 
-
+        private void cbxTipo_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            VerificarAgregar();
+            if (cbxTipo.Text == "")
+            {
+                lblAsteriscoTipoProd.Visible = true;
+            }
+            else
+            {
+                lblAsteriscoTipoProd.Visible = false;
+            }
+        }
     }
 }

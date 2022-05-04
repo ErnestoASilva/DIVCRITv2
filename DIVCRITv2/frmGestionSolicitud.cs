@@ -122,7 +122,7 @@ namespace DIVCRITv2
                 {
                     if (dgvSolicitudes.Rows.Count == 0)
                     {
-                        MessageBox.Show("No hay solicitudes que mostrar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("No hay solicitudes que mostrar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
             }
