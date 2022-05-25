@@ -37,6 +37,8 @@ namespace DIVCRITv2
             dtpDiaEntrada.Value = DateTime.Now;
             nudDiasVacacionesPedidos.Value = 0;
             tbxCorreoJefe.Clear();
+            nudDiasExtra.Value = 0;
+            cbxColaboradorExtra.SelectedIndex = 0;
         }
 
         private void cbxNombreActualizar_SelectedIndexChanged(object sender, EventArgs e)
@@ -135,6 +137,7 @@ namespace DIVCRITv2
                 {
                     sqlCmd.ExecuteNonQuery();
                     sqlCmd2.ExecuteNonQuery();
+                    limpiarCampos();
                     MessageBox.Show("El colaborador ha sido actualizado exitosamente.", "Actulización Exitosa.", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
@@ -150,7 +153,8 @@ namespace DIVCRITv2
             conexion.Close();
 
             //LLAMADA AL EVENTO PARA ACTUALIZAR EL COMBOBOX
-            cbxNombreActualizar_SelectedIndexChanged((object)sender, (EventArgs)e);
+            limpiarCampos();
+            //cbxNombreActualizar_SelectedIndexChanged((object)sender, (EventArgs)e);
 
         }
 
@@ -175,6 +179,7 @@ namespace DIVCRITv2
 
             //EVENTO PARA
             cbxNombreActualizar_SelectedIndexChanged((object)sender, (EventArgs)e);
+            limpiarCampos();
 
         }
     }

@@ -29,7 +29,6 @@ namespace DIVCRITv2
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDirectorio));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -76,9 +75,11 @@ namespace DIVCRITv2
             this.gbxDatos.Controls.Add(this.label4);
             this.gbxDatos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDatos.ForeColor = System.Drawing.SystemColors.Control;
-            this.gbxDatos.Location = new System.Drawing.Point(510, 8);
+            this.gbxDatos.Location = new System.Drawing.Point(680, 10);
+            this.gbxDatos.Margin = new System.Windows.Forms.Padding(4);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(413, 499);
+            this.gbxDatos.Padding = new System.Windows.Forms.Padding(4);
+            this.gbxDatos.Size = new System.Drawing.Size(551, 614);
             this.gbxDatos.TabIndex = 20;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Colaborador";
@@ -87,9 +88,10 @@ namespace DIVCRITv2
             // 
             this.tbxCorreo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxCorreo.Enabled = false;
-            this.tbxCorreo.Location = new System.Drawing.Point(97, 387);
+            this.tbxCorreo.Location = new System.Drawing.Point(129, 476);
+            this.tbxCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.tbxCorreo.Name = "tbxCorreo";
-            this.tbxCorreo.Size = new System.Drawing.Size(305, 27);
+            this.tbxCorreo.Size = new System.Drawing.Size(405, 32);
             this.tbxCorreo.TabIndex = 16;
             // 
             // label2
@@ -99,9 +101,10 @@ namespace DIVCRITv2
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(11, 388);
+            this.label2.Location = new System.Drawing.Point(15, 478);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 21);
+            this.label2.Size = new System.Drawing.Size(88, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Correo: ";
             // 
@@ -112,9 +115,10 @@ namespace DIVCRITv2
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxImagen.BackgroundImage = global::DIVCRITv2.Properties.Resources.IconoUsuario;
             this.pbxImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pbxImagen.Location = new System.Drawing.Point(116, 68);
+            this.pbxImagen.Location = new System.Drawing.Point(155, 84);
+            this.pbxImagen.Margin = new System.Windows.Forms.Padding(4);
             this.pbxImagen.Name = "pbxImagen";
-            this.pbxImagen.Size = new System.Drawing.Size(181, 148);
+            this.pbxImagen.Size = new System.Drawing.Size(241, 182);
             this.pbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxImagen.TabIndex = 14;
             this.pbxImagen.TabStop = false;
@@ -124,45 +128,50 @@ namespace DIVCRITv2
             // 
             this.tbxArea.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxArea.Enabled = false;
-            this.tbxArea.Location = new System.Drawing.Point(97, 463);
+            this.tbxArea.Location = new System.Drawing.Point(129, 570);
+            this.tbxArea.Margin = new System.Windows.Forms.Padding(4);
             this.tbxArea.Name = "tbxArea";
-            this.tbxArea.Size = new System.Drawing.Size(305, 27);
+            this.tbxArea.Size = new System.Drawing.Size(405, 32);
             this.tbxArea.TabIndex = 13;
             // 
             // tbxOficina
             // 
             this.tbxOficina.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxOficina.Enabled = false;
-            this.tbxOficina.Location = new System.Drawing.Point(97, 425);
+            this.tbxOficina.Location = new System.Drawing.Point(129, 523);
+            this.tbxOficina.Margin = new System.Windows.Forms.Padding(4);
             this.tbxOficina.Name = "tbxOficina";
-            this.tbxOficina.Size = new System.Drawing.Size(305, 27);
+            this.tbxOficina.Size = new System.Drawing.Size(405, 32);
             this.tbxOficina.TabIndex = 12;
             // 
             // tbxExtension
             // 
             this.tbxExtension.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxExtension.Enabled = false;
-            this.tbxExtension.Location = new System.Drawing.Point(97, 349);
+            this.tbxExtension.Location = new System.Drawing.Point(129, 430);
+            this.tbxExtension.Margin = new System.Windows.Forms.Padding(4);
             this.tbxExtension.Name = "tbxExtension";
-            this.tbxExtension.Size = new System.Drawing.Size(305, 27);
+            this.tbxExtension.Size = new System.Drawing.Size(405, 32);
             this.tbxExtension.TabIndex = 11;
             // 
             // tbxPuesto
             // 
             this.tbxPuesto.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxPuesto.Enabled = false;
-            this.tbxPuesto.Location = new System.Drawing.Point(97, 311);
+            this.tbxPuesto.Location = new System.Drawing.Point(129, 383);
+            this.tbxPuesto.Margin = new System.Windows.Forms.Padding(4);
             this.tbxPuesto.Name = "tbxPuesto";
-            this.tbxPuesto.Size = new System.Drawing.Size(305, 27);
+            this.tbxPuesto.Size = new System.Drawing.Size(405, 32);
             this.tbxPuesto.TabIndex = 10;
             // 
             // tbxNombre
             // 
             this.tbxNombre.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tbxNombre.Enabled = false;
-            this.tbxNombre.Location = new System.Drawing.Point(97, 273);
+            this.tbxNombre.Location = new System.Drawing.Point(129, 336);
+            this.tbxNombre.Margin = new System.Windows.Forms.Padding(4);
             this.tbxNombre.Name = "tbxNombre";
-            this.tbxNombre.Size = new System.Drawing.Size(305, 27);
+            this.tbxNombre.Size = new System.Drawing.Size(405, 32);
             this.tbxNombre.TabIndex = 9;
             // 
             // label9
@@ -172,9 +181,10 @@ namespace DIVCRITv2
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.Control;
-            this.label9.Location = new System.Drawing.Point(11, 464);
+            this.label9.Location = new System.Drawing.Point(15, 571);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 21);
+            this.label9.Size = new System.Drawing.Size(69, 23);
             this.label9.TabIndex = 8;
             this.label9.Text = "Área: ";
             // 
@@ -185,9 +195,10 @@ namespace DIVCRITv2
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Control;
-            this.label7.Location = new System.Drawing.Point(11, 426);
+            this.label7.Location = new System.Drawing.Point(15, 524);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 21);
+            this.label7.Size = new System.Drawing.Size(89, 23);
             this.label7.TabIndex = 6;
             this.label7.Text = "Oficina: ";
             // 
@@ -198,9 +209,10 @@ namespace DIVCRITv2
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Control;
-            this.label5.Location = new System.Drawing.Point(11, 350);
+            this.label5.Location = new System.Drawing.Point(15, 431);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 21);
+            this.label5.Size = new System.Drawing.Size(110, 23);
             this.label5.TabIndex = 4;
             this.label5.Text = "Extensión: ";
             // 
@@ -211,9 +223,10 @@ namespace DIVCRITv2
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Control;
-            this.label3.Location = new System.Drawing.Point(11, 312);
+            this.label3.Location = new System.Drawing.Point(15, 384);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 21);
+            this.label3.Size = new System.Drawing.Size(86, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Puesto: ";
             // 
@@ -224,9 +237,10 @@ namespace DIVCRITv2
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Control;
-            this.label4.Location = new System.Drawing.Point(11, 274);
+            this.label4.Location = new System.Drawing.Point(15, 337);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 21);
+            this.label4.Size = new System.Drawing.Size(101, 23);
             this.label4.TabIndex = 0;
             this.label4.Text = "Nombre: ";
             // 
@@ -259,7 +273,8 @@ namespace DIVCRITv2
             this.dgvColaboradores.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvColaboradores.EnableHeadersVisualStyles = false;
             this.dgvColaboradores.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dgvColaboradores.Location = new System.Drawing.Point(12, 50);
+            this.dgvColaboradores.Location = new System.Drawing.Point(16, 62);
+            this.dgvColaboradores.Margin = new System.Windows.Forms.Padding(4);
             this.dgvColaboradores.Name = "dgvColaboradores";
             this.dgvColaboradores.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -271,18 +286,21 @@ namespace DIVCRITv2
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvColaboradores.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvColaboradores.RowHeadersVisible = false;
+            this.dgvColaboradores.RowHeadersWidth = 51;
             this.dgvColaboradores.RowTemplate.Height = 23;
             this.dgvColaboradores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvColaboradores.Size = new System.Drawing.Size(492, 457);
+            this.dgvColaboradores.Size = new System.Drawing.Size(656, 562);
             this.dgvColaboradores.TabIndex = 19;
             this.dgvColaboradores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvColaboradores_CellClick);
             // 
             // tbxBuscar
             // 
             this.tbxBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbxBuscar.Location = new System.Drawing.Point(263, 17);
+            this.tbxBuscar.Location = new System.Drawing.Point(351, 21);
+            this.tbxBuscar.Margin = new System.Windows.Forms.Padding(4);
+            this.tbxBuscar.MaxLength = 100;
             this.tbxBuscar.Name = "tbxBuscar";
-            this.tbxBuscar.Size = new System.Drawing.Size(241, 27);
+            this.tbxBuscar.Size = new System.Drawing.Size(320, 32);
             this.tbxBuscar.TabIndex = 18;
             this.tbxBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
             // 
@@ -293,35 +311,43 @@ namespace DIVCRITv2
             this.cbxTipoBusqueda.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxTipoBusqueda.FormattingEnabled = true;
             this.cbxTipoBusqueda.Items.AddRange(new object[] {
-            "nombre",
-            "area"});
-            this.cbxTipoBusqueda.Location = new System.Drawing.Point(113, 16);
+            "NOMBRE",
+            "PUESTO",
+            "EXTENSIÓN ",
+            "CORREO",
+            "OFICINA",
+            "ÁREA"});
+            this.cbxTipoBusqueda.Location = new System.Drawing.Point(151, 20);
+            this.cbxTipoBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.cbxTipoBusqueda.Name = "cbxTipoBusqueda";
-            this.cbxTipoBusqueda.Size = new System.Drawing.Size(144, 28);
+            this.cbxTipoBusqueda.Size = new System.Drawing.Size(191, 30);
             this.cbxTipoBusqueda.TabIndex = 17;
+            this.cbxTipoBusqueda.SelectedIndexChanged += new System.EventHandler(this.cbxTipoBusqueda_SelectedIndexChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Location = new System.Drawing.Point(16, 20);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 21);
+            this.label1.Size = new System.Drawing.Size(118, 23);
             this.label1.TabIndex = 16;
             this.label1.Text = "Buscar por:";
             // 
             // frmDirectorio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
-            this.ClientSize = new System.Drawing.Size(934, 515);
+            this.ClientSize = new System.Drawing.Size(1245, 634);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.dgvColaboradores);
             this.Controls.Add(this.tbxBuscar);
             this.Controls.Add(this.cbxTipoBusqueda);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmDirectorio";
             this.Text = "frmDirectorio";
             this.Load += new System.EventHandler(this.frmDirectorio_Load);

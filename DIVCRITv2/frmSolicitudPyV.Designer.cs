@@ -30,7 +30,6 @@ namespace DIVCRITv2
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSolicitudPyV));
             this.label13 = new System.Windows.Forms.Label();
             this.lblDiasCalcualdos = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -201,7 +200,7 @@ namespace DIVCRITv2
             this.btnSolicitarVacaciones.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitarVacaciones.ForeColor = System.Drawing.Color.LightGray;
             this.btnSolicitarVacaciones.Location = new System.Drawing.Point(157, 453);
-            this.btnSolicitarVacaciones.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSolicitarVacaciones.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSolicitarVacaciones.Name = "btnSolicitarVacaciones";
             this.btnSolicitarVacaciones.Size = new System.Drawing.Size(159, 40);
             this.btnSolicitarVacaciones.TabIndex = 39;
@@ -319,14 +318,14 @@ namespace DIVCRITv2
             // 
             // lblArea
             // 
-            this.lblArea.AutoSize = true;
+            this.lblArea.AutoEllipsis = true;
             this.lblArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
             this.lblArea.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblArea.ForeColor = System.Drawing.Color.LightGray;
             this.lblArea.Location = new System.Drawing.Point(148, 120);
             this.lblArea.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(61, 21);
+            this.lblArea.Size = new System.Drawing.Size(295, 19);
             this.lblArea.TabIndex = 9;
             this.lblArea.Text = "[Area]";
             // 
@@ -420,8 +419,8 @@ namespace DIVCRITv2
             // pbxFoto
             // 
             this.pbxFoto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
-            this.pbxFoto.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbxFoto.BackgroundImage")));
             this.pbxFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbxFoto.Image = global::DIVCRITv2.Properties.Resources.IconoUsuario;
             this.pbxFoto.Location = new System.Drawing.Point(8, 14);
             this.pbxFoto.Name = "pbxFoto";
             this.pbxFoto.Size = new System.Drawing.Size(135, 162);
@@ -483,14 +482,14 @@ namespace DIVCRITv2
             // 
             // lblNomina
             // 
-            this.lblNomina.AutoSize = true;
+            this.lblNomina.AutoEllipsis = true;
             this.lblNomina.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
             this.lblNomina.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNomina.ForeColor = System.Drawing.Color.LightGray;
             this.lblNomina.Location = new System.Drawing.Point(148, 71);
             this.lblNomina.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomina.Name = "lblNomina";
-            this.lblNomina.Size = new System.Drawing.Size(83, 21);
+            this.lblNomina.Size = new System.Drawing.Size(295, 19);
             this.lblNomina.TabIndex = 7;
             this.lblNomina.Text = "[Nomina]";
             // 
@@ -509,14 +508,14 @@ namespace DIVCRITv2
             // 
             // lblCorreo
             // 
-            this.lblCorreo.AutoSize = true;
+            this.lblCorreo.AutoEllipsis = true;
             this.lblCorreo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
             this.lblCorreo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCorreo.ForeColor = System.Drawing.Color.LightGray;
             this.lblCorreo.Location = new System.Drawing.Point(148, 96);
             this.lblCorreo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(75, 21);
+            this.lblCorreo.Size = new System.Drawing.Size(295, 19);
             this.lblCorreo.TabIndex = 8;
             this.lblCorreo.Text = "[Correo]";
             // 
@@ -535,14 +534,14 @@ namespace DIVCRITv2
             // 
             // lblPuesto
             // 
-            this.lblPuesto.AutoSize = true;
+            this.lblPuesto.AutoEllipsis = true;
             this.lblPuesto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(82)))), ((int)(((byte)(2)))), ((int)(((byte)(149)))));
             this.lblPuesto.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPuesto.ForeColor = System.Drawing.Color.LightGray;
             this.lblPuesto.Location = new System.Drawing.Point(148, 144);
             this.lblPuesto.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPuesto.Name = "lblPuesto";
-            this.lblPuesto.Size = new System.Drawing.Size(74, 21);
+            this.lblPuesto.Size = new System.Drawing.Size(295, 19);
             this.lblPuesto.TabIndex = 10;
             this.lblPuesto.Text = "[Puesto]";
             // 
@@ -599,7 +598,7 @@ namespace DIVCRITv2
             this.tabConGoce.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabConGoce.Location = new System.Drawing.Point(4, 30);
             this.tabConGoce.Name = "tabConGoce";
-            this.tabConGoce.Padding = new System.Windows.Forms.Padding(3);
+            this.tabConGoce.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabConGoce.Size = new System.Drawing.Size(461, 652);
             this.tabConGoce.TabIndex = 0;
             this.tabConGoce.Text = "Con Goce";
@@ -615,7 +614,7 @@ namespace DIVCRITv2
             this.btnSolicitarCG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitarCG.ForeColor = System.Drawing.Color.LightGray;
             this.btnSolicitarCG.Location = new System.Drawing.Point(138, 577);
-            this.btnSolicitarCG.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSolicitarCG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSolicitarCG.Name = "btnSolicitarCG";
             this.btnSolicitarCG.Size = new System.Drawing.Size(159, 40);
             this.btnSolicitarCG.TabIndex = 36;
@@ -780,7 +779,7 @@ namespace DIVCRITv2
             this.tabSinGoce.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabSinGoce.Location = new System.Drawing.Point(4, 30);
             this.tabSinGoce.Name = "tabSinGoce";
-            this.tabSinGoce.Padding = new System.Windows.Forms.Padding(3);
+            this.tabSinGoce.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabSinGoce.Size = new System.Drawing.Size(461, 652);
             this.tabSinGoce.TabIndex = 1;
             this.tabSinGoce.Text = "Sin Goce";
@@ -796,7 +795,7 @@ namespace DIVCRITv2
             this.btnSolicitarSG.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitarSG.ForeColor = System.Drawing.Color.LightGray;
             this.btnSolicitarSG.Location = new System.Drawing.Point(157, 539);
-            this.btnSolicitarSG.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSolicitarSG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSolicitarSG.Name = "btnSolicitarSG";
             this.btnSolicitarSG.Size = new System.Drawing.Size(159, 40);
             this.btnSolicitarSG.TabIndex = 37;
@@ -931,7 +930,7 @@ namespace DIVCRITv2
             this.btnSolicitarHoras.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSolicitarHoras.ForeColor = System.Drawing.Color.LightGray;
             this.btnSolicitarHoras.Location = new System.Drawing.Point(149, 490);
-            this.btnSolicitarHoras.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSolicitarHoras.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSolicitarHoras.Name = "btnSolicitarHoras";
             this.btnSolicitarHoras.Size = new System.Drawing.Size(159, 40);
             this.btnSolicitarHoras.TabIndex = 38;

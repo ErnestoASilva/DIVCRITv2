@@ -136,7 +136,7 @@ namespace DIVCRITv2
                         sqlCmd2.ExecuteNonQuery();
                         proximo_reset = dos_anios_mas;
                         diasPedidos = 0;
-                        enviarCorreo();
+                        //enviarCorreo();
                     }
                     catch (SqlException ex)
                     {
@@ -191,27 +191,27 @@ namespace DIVCRITv2
 
                 //COMPROBACIÓN DE DÍAS Y PERMISOS DISPONIBLES CON LA COMPROBACIÓN DE QUE NO HAYAN LLEGADO A CERO.
                 //SI ESE ES EL CASO, SE MUESTRA UN MESSAGEBOX AVISANDO QUE YA NO TIENE PERMISOS Y BLOQUEANDO LAS TABS CORRESPONDIENTES.
-                if (diasTotales <= 0)
+                if (diasDisponibles <= 0)
                 {
-                    MessageBox.Show("Ya no te quedan días de vacaciones.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("Ya no te quedan días de vacaciones.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     ((Control)this.tabVacaciones).Enabled = false;
 
                 }
                 if (permisos_dias_restantes <= 0)
                 {
-                    MessageBox.Show("Ya no te quedan permisos de días restantes en este semestre.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("Ya no te quedan permisos de días restantes en este semestre.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     ((Control)this.tabConGoce).Enabled = false;
 
                 }
                 if (permisos_dias_sinsueldo_restantes <= 0)
                 {
-                    MessageBox.Show("Ya no te quedan permisos de días sin goce de sueldo restantes en este semestre.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("Ya no te quedan permisos de días sin goce de sueldo restantes en este semestre.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     ((Control)this.tabSinGoce).Enabled = false;
 
                 }
                 if (permisos_horas_restantes <= 0)
                 {
-                    MessageBox.Show("Ya no te quedan permisos de horas restantes en este semestre.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //MessageBox.Show("Ya no te quedan permisos de horas restantes en este semestre.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     ((Control)this.tabHoras).Enabled = false;
                 }
 
@@ -295,9 +295,18 @@ namespace DIVCRITv2
         */
         public void enviarCorreo()
         {
-            System.Net.Mail.MailMessage mensaje = new System.Net.Mail.MailMessage();
 
-            mensaje.To.Add(correo_jefe);
+            System.Net.Mail.MailMessage mensaje = new System.Net.Mail.MailMessage();
+            try
+            {
+                mensaje.To.Add(correo_jefe);
+            }
+            catch (Exception)
+            {
+
+               
+            }
+  
             mensaje.Subject = "Solicitud de Permiso Vacacional de " + nombre;
             mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
 
@@ -362,9 +371,15 @@ namespace DIVCRITv2
         {
             //EL RADIOBUTTON DE MOTIVO SELECCIONADO SE VERÁ REFLEJADO EN EL MOTIVO EN LA SOLICITUD
             tipoPermiso = "DIAS LIBRES CON GOCE DE SUELDO";
+
+            if (rbtEnfermedad.Checked)
+            {
+                motivo = "ENFERMEDAD / MALESTAR";
+            }
+
             if (rbtTitulacion.Checked)
             {
-                motivo = "Titulación";
+                motivo = "TITULACIÓN";
             }
 
             if (rbtCursos.Checked)
@@ -596,7 +611,7 @@ namespace DIVCRITv2
             {
                 sqlCmd2.ExecuteNonQuery();
                 MessageBox.Show("Se ha enviado exitosamente la solicitud.", "Petición Exitosa.", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                enviarCorreo();
+                //enviarCorreo();
             }
             catch (SqlException ex)
             {

@@ -26,6 +26,8 @@ namespace DIVCRITv2
 
         public string tipoUsuario; /*!< Es el tipo de usuario registrado con el colaborador */
 
+        string BuscarColumna;
+
         private void frmDirectorio_Load(object sender, EventArgs e)
         {
             dgvColaboradores.AllowUserToResizeRows = false;
@@ -73,7 +75,8 @@ namespace DIVCRITv2
             {
                 //CREACIÓN Y EJECUCIÓN DE LA CONSULTA PARA CONSEGUIR A LAS PERSONAS QUE SATISFACEN NUESTRO FILTRO
                 conexion.Open();
-                string consulta = "SELECT nombre, puesto, extension, correo, oficina, area FROM COLABORADORES WHERE " + cbxTipoBusqueda.Text.Trim() + " LIKE '%" + tbxBuscar.Text.Trim() + "%' ORDER BY nombre";
+                string consulta = "SELECT nombre AS 'Nombre', puesto AS 'Puesto', extension AS 'Extensión', correo AS 'Correo', oficina AS 'Oficina', " +
+                    "area AS 'Área' FROM COLABORADORES WHERE " + BuscarColumna.Trim() + " LIKE '%" + tbxBuscar.Text.Trim() + "%' ORDER BY nombre";
                 var dataAdapter = new SqlDataAdapter(consulta, conexion);
                 var commandBuilder = new SqlCommandBuilder(dataAdapter);
 
@@ -122,6 +125,40 @@ namespace DIVCRITv2
         private void pbxImagen_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbxTipoBusqueda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (cbxTipoBusqueda.Text)
+            {
+                case "NOMBRE":
+                    BuscarColumna = "nombre";
+                    break;
+
+                case "PUESTO":
+                    BuscarColumna = "puesto";
+                    break;
+
+                case "EXTENSIÓN ":
+                    BuscarColumna = "extension";
+                    break;
+
+                case "CORREO":
+                    BuscarColumna = "correo";
+                    break;
+
+                case "OFICINA":
+                    BuscarColumna = "oficina";
+                    break;
+
+                case "ÁREA":
+                    BuscarColumna = "area";
+                    break;
+
+                default:
+                    BuscarColumna = "nombre";
+                    break;
+            }
         }
     }
 }

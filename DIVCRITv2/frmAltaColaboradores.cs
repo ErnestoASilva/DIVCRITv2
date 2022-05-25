@@ -187,7 +187,7 @@ namespace DIVCRITv2
 
             SqlCommand sqlCmd2 = new SqlCommand("UPDATE VACACIONES SET dias_pedidos = '" + nudDiasVacacionesPedidos.Value + "' where nomina = " + tbxNomina.Text, conexion);
 
-            SqlCommand sqlCmd3 = new SqlCommand("UPDATE COLABORADORES SET [imagen] = (SELECT BulkColumn FROM Openrowset (Bulk '" + direccionMostrarpbx
+            SqlCommand sqlCmd3 = new SqlCommand("UPDATE COLABORADORES SET [imagen] = (SELECT BulkColumn FROM Openrowset (Bulk '" + direccionArchivo
                 + "', Single_Blob) imagen) WHERE nomina = " + tbxNomina.Text, conexion);
 
             conexion.Open();
@@ -272,7 +272,7 @@ namespace DIVCRITv2
                 "dias_pedidos, permisos_dias_pedidos, permisos_dias_sinsueldo_pedidos, permisos_horas_pedidos) " +
                 "VALUES (" + tbxNomina.Text.Trim() + ", " + nudDiasVacacionesPedidos.Value + ", " + 0 + ", " + 0 + ", " + 0 + ")", conexion);
 
-            SqlCommand sqlCmd3 = new SqlCommand("UPDATE COLABORADORES SET [imagen] = (SELECT BulkColumn FROM Openrowset (Bulk '" + direccionMostrarpbx
+            SqlCommand sqlCmd3 = new SqlCommand("UPDATE COLABORADORES SET [imagen] = (SELECT BulkColumn FROM Openrowset (Bulk '" + direccionArchivo
                 + "', Single_Blob) imagen) WHERE nomina = " + tbxNomina.Text, conexion);
 
             conexion.Open();
@@ -305,8 +305,8 @@ namespace DIVCRITv2
                 MessageBox.Show("El colaborador ha sido registrado exitosamente.", "Registro Exitoso.", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 //LLAMADA A LOS METODOS PARA ACTUALIZAR EL COMBOBOX Y LIMPIAR LOS CAMPOS
-                ResetearNombresActualizar();
                 limpiarCampos();
+                ResetearNombresActualizar();
                 tbxNomina.Enabled = true;
 
             }
@@ -329,23 +329,11 @@ namespace DIVCRITv2
 
             VerificarDias();
 
-            cbxNombreActualizar.Items.Clear();
-
             cbxTipoUsuario.SelectedIndex = 0;
             cbxPuesto.SelectedIndex = 0;
             cbxArea.SelectedIndex = 0;
-            SqlCommand sqlCmd5 = new SqlCommand("SELECT nombre FROM COLABORADORES ORDER BY nombre ASC", conexion);
-            conexion.Open();
-            SqlDataReader sqlReader = sqlCmd5.ExecuteReader();
             pbxImagen.Enabled = true;
-
-            while (sqlReader.Read())
-            {
-                cbxNombreActualizar.Items.Add(sqlReader["nombre"].ToString());
-            }
-
-            conexion.Close();
-
+            ResetearNombresActualizar();
         }
 
         /**
@@ -495,7 +483,7 @@ namespace DIVCRITv2
             //USANDO EL EXPLORADOR DE ARCHIVOS...
             using (OpenFileDialog openFileDialog = new OpenFileDialog())
             {
-                openFileDialog.InitialDirectory = "c:\\";
+                openFileDialog.InitialDirectory = "\\tutuli/";
                 openFileDialog.Filter = "Fotos (*.jpg, *.jpeg, *.png)|*.jpg; *.jpeg; *.png";
                 openFileDialog.FilterIndex = 2;
                 openFileDialog.RestoreDirectory = true;
@@ -504,7 +492,8 @@ namespace DIVCRITv2
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     //OBTENER LA RUTA DEL ARCHIVO SELECCIONADO(RUTA DEÑ SERVIDOR)
-                    direccionArchivo = "/Users/TEMP/Pictures/DIVCRIT/" + openFileDialog.SafeFileName;
+                    //direccionArchivo = "/Users/TEMP/Pictures/DIVCRIT/" + openFileDialog.SafeFileName;
+                    direccionArchivo = "/home/ticrit/Pictures/FOTOSSISTEMACRIT/" + openFileDialog.SafeFileName;
                     direccionMostrarpbx = openFileDialog.FileName;
                     //MessageBox.Show(direccionMostrarpbx);
                     //direccionMostrarpbx = openFileDialog.InitialDirectory;
@@ -571,6 +560,7 @@ namespace DIVCRITv2
         public void ResetearNombresActualizar()
         {
             cbxNombreActualizar.Items.Clear();
+            cbxColaboradorExtra.Items.Clear();
 
             SqlCommand sqlCmd = new SqlCommand("SELECT nombre FROM COLABORADORES order by nombre", conexion);
             conexion.Open();
@@ -579,6 +569,7 @@ namespace DIVCRITv2
             while (sqlReader.Read())
             {
                 cbxNombreActualizar.Items.Add(sqlReader["nombre"].ToString());
+                cbxColaboradorExtra.Items.Add(sqlReader["nombre"].ToString());
             }
 
             conexion.Close();
@@ -617,6 +608,7 @@ namespace DIVCRITv2
             btnAgregar.Visible = true;
             groupBox2.Text = " Para Agregar un Colaborador Rellene los Campos";
             btnCancelarAct.Visible = false;
+            tbxNomina.Enabled = true;
             limpiarCampos();
         }
 

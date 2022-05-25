@@ -13,13 +13,14 @@ namespace DIVCRITv2
 {
     public partial class frmInventario : Form
     {
+        //public static string cadena = "Server=tutuli;Database=INVENTARIO_CRIT;User Id=sa;Password=Sistemas21;";
         //static string cadena = "Server=iturbide;Database=INVENTARIO_CRIT;User Id=super;Password=super;";
         public static string cadena = "Data Source = Ernesto-PC; Initial Catalog =INVENTARIO_CRIT;Persist Security Info=True;User ID = Admin; Password = admin1";
         public string BuscarColumna; /*!< Especificación de la variable para la columna de la base de datos. */
 
         //Cadena 2
         public static string cadena2 = "Data Source = Ernesto-PC; Initial Catalog =SISTEMA_CRIT;Persist Security Info=True;User ID = sa; Password = admin";
-
+        //public static string cadena2 = "Server=tutuli;Database=SISTEMA_CRIT;User Id=sa;Password=Sistemas21;";
         public SqlConnection conexion = new SqlConnection(cadena);
         public string tipoUsuario; /*!< Tipo de usuario registrado(admin, usuario normal, etc.) */
 

@@ -60,7 +60,7 @@ namespace DIVCRITv2
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(4, 92);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(243, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -123,8 +123,9 @@ namespace DIVCRITv2
             this.tbxUsuario.ForeColor = System.Drawing.Color.LightGray;
             this.tbxUsuario.Location = new System.Drawing.Point(319, 134);
             this.tbxUsuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxUsuario.MaxLength = 50;
             this.tbxUsuario.Name = "tbxUsuario";
-            this.tbxUsuario.Size = new System.Drawing.Size(377, 20);
+            this.tbxUsuario.Size = new System.Drawing.Size(377, 25);
             this.tbxUsuario.TabIndex = 0;
             this.tbxUsuario.Text = "USUARIO";
             this.tbxUsuario.Click += new System.EventHandler(this.tbxUsuario_Click);
@@ -137,7 +138,7 @@ namespace DIVCRITv2
             this.label1.ForeColor = System.Drawing.Color.LightGray;
             this.label1.Location = new System.Drawing.Point(448, 63);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 33);
+            this.label1.Size = new System.Drawing.Size(122, 40);
             this.label1.TabIndex = 5;
             this.label1.Text = "LOGIN";
             // 
@@ -186,8 +187,9 @@ namespace DIVCRITv2
             this.tbxPassword.ForeColor = System.Drawing.Color.LightGray;
             this.tbxPassword.Location = new System.Drawing.Point(317, 185);
             this.tbxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tbxPassword.MaxLength = 50;
             this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(377, 20);
+            this.tbxPassword.Size = new System.Drawing.Size(377, 25);
             this.tbxPassword.TabIndex = 1;
             this.tbxPassword.Text = "CONTRASEÑA";
             this.tbxPassword.TextChanged += new System.EventHandler(this.tbxPassword_TextChanged);

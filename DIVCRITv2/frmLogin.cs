@@ -30,7 +30,7 @@ namespace DIVCRITv2
         static string cadena = "Server=iturbide;Database=SISTEMA_CRIT;User Id=super;Password=super;";
         */
 
-        //static string cadena = "Server=tutuli;Database=SISTEMA_CRIT;User Id=sa;Password=Sistemas21;";
+        //public static string cadena = "Server=tutuli;Database=SISTEMA_CRIT;User Id=sa;Password=Sistemas21;";
 
         public static string cadena = "Data Source = Ernesto-PC; Initial Catalog =SISTEMA_CRIT;Persist Security Info=True;User ID = Admin; Password = admin1";
 

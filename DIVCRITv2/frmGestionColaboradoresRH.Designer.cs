@@ -64,8 +64,9 @@ namespace DIVCRITv2
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(676, 418);
+            this.panel1.Size = new System.Drawing.Size(507, 340);
             this.panel1.TabIndex = 0;
             // 
             // groupBox1
@@ -85,9 +86,11 @@ namespace DIVCRITv2
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(13, 12);
+            this.groupBox1.Location = new System.Drawing.Point(10, 10);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(649, 396);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(487, 322);
             this.groupBox1.TabIndex = 61;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccione al Colaborador para Realizar la Modificación";
@@ -102,10 +105,10 @@ namespace DIVCRITv2
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnLimpiar.Location = new System.Drawing.Point(110, 328);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnLimpiar.Location = new System.Drawing.Point(82, 266);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(189, 49);
+            this.btnLimpiar.Size = new System.Drawing.Size(142, 40);
             this.btnLimpiar.TabIndex = 75;
             this.btnLimpiar.Text = "CANCELAR";
             this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -121,10 +124,10 @@ namespace DIVCRITv2
             this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizar.ForeColor = System.Drawing.Color.LightGray;
-            this.btnActualizar.Location = new System.Drawing.Point(340, 328);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnActualizar.Location = new System.Drawing.Point(255, 266);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(189, 49);
+            this.btnActualizar.Size = new System.Drawing.Size(142, 40);
             this.btnActualizar.TabIndex = 74;
             this.btnActualizar.Text = "ACTUALIZAR";
             this.btnActualizar.UseVisualStyleBackColor = false;
@@ -135,15 +138,15 @@ namespace DIVCRITv2
             this.nudDiasVacacionesPedidos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nudDiasVacacionesPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.nudDiasVacacionesPedidos.ForeColor = System.Drawing.Color.White;
-            this.nudDiasVacacionesPedidos.Location = new System.Drawing.Point(78, 201);
-            this.nudDiasVacacionesPedidos.Margin = new System.Windows.Forms.Padding(5);
+            this.nudDiasVacacionesPedidos.Location = new System.Drawing.Point(58, 163);
+            this.nudDiasVacacionesPedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudDiasVacacionesPedidos.Minimum = new decimal(new int[] {
             1000,
             0,
             0,
             -2147483648});
             this.nudDiasVacacionesPedidos.Name = "nudDiasVacacionesPedidos";
-            this.nudDiasVacacionesPedidos.Size = new System.Drawing.Size(495, 32);
+            this.nudDiasVacacionesPedidos.Size = new System.Drawing.Size(371, 27);
             this.nudDiasVacacionesPedidos.TabIndex = 73;
             // 
             // tbxCorreoJefe
@@ -152,11 +155,11 @@ namespace DIVCRITv2
             this.tbxCorreoJefe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(57)))), ((int)(((byte)(63)))));
             this.tbxCorreoJefe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbxCorreoJefe.ForeColor = System.Drawing.Color.White;
-            this.tbxCorreoJefe.Location = new System.Drawing.Point(78, 276);
-            this.tbxCorreoJefe.Margin = new System.Windows.Forms.Padding(5);
-            this.tbxCorreoJefe.MaxLength = 9;
+            this.tbxCorreoJefe.Location = new System.Drawing.Point(58, 224);
+            this.tbxCorreoJefe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tbxCorreoJefe.MaxLength = 50;
             this.tbxCorreoJefe.Name = "tbxCorreoJefe";
-            this.tbxCorreoJefe.Size = new System.Drawing.Size(495, 32);
+            this.tbxCorreoJefe.Size = new System.Drawing.Size(372, 27);
             this.tbxCorreoJefe.TabIndex = 72;
             // 
             // cbxNombreActualizar
@@ -167,10 +170,10 @@ namespace DIVCRITv2
             this.cbxNombreActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxNombreActualizar.ForeColor = System.Drawing.Color.White;
             this.cbxNombreActualizar.FormattingEnabled = true;
-            this.cbxNombreActualizar.Location = new System.Drawing.Point(78, 65);
-            this.cbxNombreActualizar.Margin = new System.Windows.Forms.Padding(5);
+            this.cbxNombreActualizar.Location = new System.Drawing.Point(58, 53);
+            this.cbxNombreActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxNombreActualizar.Name = "cbxNombreActualizar";
-            this.cbxNombreActualizar.Size = new System.Drawing.Size(496, 31);
+            this.cbxNombreActualizar.Size = new System.Drawing.Size(373, 29);
             this.cbxNombreActualizar.Sorted = true;
             this.cbxNombreActualizar.TabIndex = 71;
             this.cbxNombreActualizar.SelectedIndexChanged += new System.EventHandler(this.cbxNombreActualizar_SelectedIndexChanged);
@@ -182,10 +185,9 @@ namespace DIVCRITv2
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(74, 175);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(56, 142);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(290, 23);
+            this.label4.Size = new System.Drawing.Size(227, 21);
             this.label4.TabIndex = 64;
             this.label4.Text = "Dias de Vacaciones Pedidos\r\n";
             // 
@@ -193,10 +195,9 @@ namespace DIVCRITv2
             // 
             this.dtpDiaEntrada.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dtpDiaEntrada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.dtpDiaEntrada.Location = new System.Drawing.Point(78, 134);
-            this.dtpDiaEntrada.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDiaEntrada.Location = new System.Drawing.Point(58, 109);
             this.dtpDiaEntrada.Name = "dtpDiaEntrada";
-            this.dtpDiaEntrada.Size = new System.Drawing.Size(495, 30);
+            this.dtpDiaEntrada.Size = new System.Drawing.Size(372, 26);
             this.dtpDiaEntrada.TabIndex = 68;
             // 
             // label5
@@ -206,10 +207,9 @@ namespace DIVCRITv2
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(74, 109);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(56, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 23);
+            this.label5.Size = new System.Drawing.Size(129, 21);
             this.label5.TabIndex = 65;
             this.label5.Text = "Día de Entrada";
             // 
@@ -220,10 +220,9 @@ namespace DIVCRITv2
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(74, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(56, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(138, 23);
+            this.label1.Size = new System.Drawing.Size(110, 21);
             this.label1.TabIndex = 63;
             this.label1.Text = "Colaborador";
             // 
@@ -234,10 +233,9 @@ namespace DIVCRITv2
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(74, 250);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(56, 203);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(231, 23);
+            this.label14.Size = new System.Drawing.Size(186, 21);
             this.label14.TabIndex = 66;
             this.label14.Text = "Correo Jefe Inmediato";
             // 
@@ -246,9 +244,10 @@ namespace DIVCRITv2
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(1)))), ((int)(((byte)(99)))));
             this.panel2.Controls.Add(this.gbxDiasExtra);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 418);
+            this.panel2.Location = new System.Drawing.Point(0, 340);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(676, 272);
+            this.panel2.Size = new System.Drawing.Size(507, 221);
             this.panel2.TabIndex = 1;
             // 
             // gbxDiasExtra
@@ -263,11 +262,9 @@ namespace DIVCRITv2
             this.gbxDiasExtra.Controls.Add(this.label2);
             this.gbxDiasExtra.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxDiasExtra.ForeColor = System.Drawing.Color.White;
-            this.gbxDiasExtra.Location = new System.Drawing.Point(13, 10);
-            this.gbxDiasExtra.Margin = new System.Windows.Forms.Padding(4);
+            this.gbxDiasExtra.Location = new System.Drawing.Point(10, 8);
             this.gbxDiasExtra.Name = "gbxDiasExtra";
-            this.gbxDiasExtra.Padding = new System.Windows.Forms.Padding(4);
-            this.gbxDiasExtra.Size = new System.Drawing.Size(649, 249);
+            this.gbxDiasExtra.Size = new System.Drawing.Size(487, 202);
             this.gbxDiasExtra.TabIndex = 55;
             this.gbxDiasExtra.TabStop = false;
             this.gbxDiasExtra.Text = "Agregar Días de Vacaciones Extra";
@@ -277,15 +274,15 @@ namespace DIVCRITv2
             this.nudDiasExtra.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.nudDiasExtra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(54)))), ((int)(((byte)(1)))), ((int)(((byte)(99)))));
             this.nudDiasExtra.ForeColor = System.Drawing.Color.White;
-            this.nudDiasExtra.Location = new System.Drawing.Point(78, 134);
-            this.nudDiasExtra.Margin = new System.Windows.Forms.Padding(5);
+            this.nudDiasExtra.Location = new System.Drawing.Point(58, 109);
+            this.nudDiasExtra.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nudDiasExtra.Minimum = new decimal(new int[] {
             1000,
             0,
             0,
             -2147483648});
             this.nudDiasExtra.Name = "nudDiasExtra";
-            this.nudDiasExtra.Size = new System.Drawing.Size(495, 32);
+            this.nudDiasExtra.Size = new System.Drawing.Size(371, 27);
             this.nudDiasExtra.TabIndex = 82;
             // 
             // btnAgregarDias
@@ -298,10 +295,10 @@ namespace DIVCRITv2
             this.btnAgregarDias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarDias.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarDias.ForeColor = System.Drawing.Color.LightGray;
-            this.btnAgregarDias.Location = new System.Drawing.Point(220, 179);
-            this.btnAgregarDias.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAgregarDias.Location = new System.Drawing.Point(165, 145);
+            this.btnAgregarDias.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregarDias.Name = "btnAgregarDias";
-            this.btnAgregarDias.Size = new System.Drawing.Size(209, 52);
+            this.btnAgregarDias.Size = new System.Drawing.Size(157, 42);
             this.btnAgregarDias.TabIndex = 81;
             this.btnAgregarDias.Text = "AGREGAR DIAS";
             this.btnAgregarDias.UseVisualStyleBackColor = false;
@@ -315,10 +312,9 @@ namespace DIVCRITv2
             this.cbxColaboradorExtra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbxColaboradorExtra.ForeColor = System.Drawing.Color.White;
             this.cbxColaboradorExtra.FormattingEnabled = true;
-            this.cbxColaboradorExtra.Location = new System.Drawing.Point(78, 66);
-            this.cbxColaboradorExtra.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxColaboradorExtra.Location = new System.Drawing.Point(58, 54);
             this.cbxColaboradorExtra.Name = "cbxColaboradorExtra";
-            this.cbxColaboradorExtra.Size = new System.Drawing.Size(496, 31);
+            this.cbxColaboradorExtra.Size = new System.Drawing.Size(373, 29);
             this.cbxColaboradorExtra.TabIndex = 80;
             // 
             // label3
@@ -328,10 +324,10 @@ namespace DIVCRITv2
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(74, 34);
-            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.label3.Location = new System.Drawing.Point(56, 28);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(252, 23);
+            this.label3.Size = new System.Drawing.Size(198, 21);
             this.label3.TabIndex = 79;
             this.label3.Text = "Seleccione Colaborador";
             // 
@@ -342,20 +338,20 @@ namespace DIVCRITv2
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(74, 108);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(56, 88);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(185, 23);
+            this.label2.Size = new System.Drawing.Size(148, 21);
             this.label2.TabIndex = 41;
             this.label2.Text = "Cantidad de Días";
             // 
             // frmGestionColaboradoresRH
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(676, 690);
+            this.ClientSize = new System.Drawing.Size(507, 561);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmGestionColaboradoresRH";
             this.Text = "frmGestionColaboradoresRH";
             this.Load += new System.EventHandler(this.frmGestionColaboradoresRH_Load);
